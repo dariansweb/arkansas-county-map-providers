@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Arkansas County DHS-DYS Heatmap</title>
+    <link rel="stylesheet" href="./styles/index.css" />
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+  </head>
+  <body>
+    <header class="app-header">
+      <h1>Juvenile Justice Information Dashboard</h1>
+    </header>
+    <div class="top-bar" id="stats-bar">
+      Show: All Districts | Total Commits: — | Per 1k Youth: —
+    </div>
+
+    <div class="main-layout">
+      <div class="left-panel">
+        <span id="districts">Districts</span>
+        <div id="district-buttons"></div>
+      </div>
+      <div class="map-container">
+        <div id="svg-container"></div>
+      </div>
+      <div class="right-panel">
+        <div class="info-box" id="info-box"></div>
+      </div>
+    </div>
+
+    <div class="tooltip" id="tooltip"></div>
+
+    <footer class="app-footer">
+      <p>
+        Built with ❤️ using open data from the
+        <a
+          href="https://gis.arkansas.gov/product/county-boundary-polygons/"
+          target="_blank"
+          rel="noopener"
+          >Arkansas GIS Office</a
+        >
+        and
+        <a
+          href="https://www.census.gov/data/tables/time-series/demo/popest/2020s-counties-detail.html"
+          target="_blank"
+          rel="noopener"
+          >U.S. Census Bureau</a
+        >.
+      </p>
+      <p>
+        View source on
+        <a
+          href="https://github.com/dariansweb/arkansas-county-map"
+          target="_blank"
+          rel="noopener"
+          >GitHub</a
+        >
+        — contributions welcome!
+      </p>
+    </footer>
+    <script type="module" src="./scripts/index.js"></script>
+  </body>
+</html>
