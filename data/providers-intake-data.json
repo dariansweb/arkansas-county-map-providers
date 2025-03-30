@@ -1,0 +1,258 @@
+[
+  {
+    "provider": "Civilian Student Training Program",
+    "district": "11W",
+    "county": ["Pulaski", "Benton"],
+    "2020": {
+      "male": 34,
+      "female": 0,
+      "total": 34,
+      "ageBreakdown": {
+        "12_and_younger": 0,
+        "13": 4,
+        "14": 6,
+        "15": 5,
+        "16": 9,
+        "17": 10,
+        "18_and_older": 0
+      }
+    },
+    "2021": {
+      "male": 0,
+      "female": 0,
+      "total": 0,
+      "ageBreakdown": {
+        "12_and_younger": 0,
+        "13": 0,
+        "14": 0,
+        "15": 0,
+        "16": 0,
+        "17": 0,
+        "18_and_older": 0
+      }
+    },
+    "2022": {
+      "male": 0,
+      "female": 0,
+      "total": 0,
+      "ageBreakdown": {
+        "12_and_younger": 0,
+        "13": 0,
+        "14": 0,
+        "15": 0,
+        "16": 0,
+        "17": 0,
+        "18_and_older": 0
+      }
+    },
+    "2023": {
+      "male": 0,
+      "female": 0,
+      "total": 0,
+      "ageBreakdown": {
+        "12_and_younger": 0,
+        "13": 0,
+        "14": 0,
+        "15": 0,
+        "16": 0,
+        "17": 0,
+        "18_and_older": 0
+      }
+    },
+    "2024": {
+      "male": 0,
+      "female": 0,
+      "total": 0,
+      "ageBreakdown": {
+        "12_and_younger": 0,
+        "13": 0,
+        "14": 0,
+        "15": 0,
+        "16": 0,
+        "17": 0,
+        "18_and_older": 0
+      }
+    }
+  },
+  
+  {
+    "provider": "Comprehensive Juvenile Services",
+    "male": 149,
+    "female": 98,
+    "total": 247,
+    "ageBreakdown": {
+      "12_and_younger": 10,
+      "13": 19,
+      "14": 35,
+      "15": 53,
+      "16": 63,
+      "17": 54,
+      "18_and_older": 13
+    }
+  },
+  {
+    "provider": "Consolidated Youth Services",
+    "male": 176,
+    "female": 75,
+    "total": 251,
+    "ageBreakdown": {
+      "12_and_younger": 24,
+      "13": 15,
+      "14": 37,
+      "15": 62,
+      "16": 53,
+      "17": 54,
+      "18_and_older": 6
+    }
+  },
+  {
+    "provider": "Conway County Community Services, Inc.",
+    "male": 457,
+    "female": 249,
+    "total": 706,
+    "ageBreakdown": {
+      "12_and_younger": 112,
+      "13": 70,
+      "14": 108,
+      "15": 130,
+      "16": 140,
+      "17": 133,
+      "18_and_older": 13
+    }
+  },
+  {
+    "provider": "Counseling Clinic, Inc.",
+    "male": 104,
+    "female": 92,
+    "total": 196,
+    "ageBreakdown": {
+      "12_and_younger": 69,
+      "13": 19,
+      "14": 19,
+      "15": 33,
+      "16": 29,
+      "17": 19,
+      "18_and_older": 8
+    }
+  },
+  {
+    "provider": "CSTP - Civilian Student Training Program",
+    "male": 71,
+    "female": 0,
+    "total": 71,
+    "ageBreakdown": {
+      "12_and_younger": 1,
+      "13": 3,
+      "14": 10,
+      "15": 22,
+      "16": 19,
+      "17": 16,
+      "18_and_older": 0
+    }
+  },
+  {
+    "provider": "East Arkansas Youth Services, Inc.",
+    "male": 81,
+    "female": 31,
+    "total": 112,
+    "ageBreakdown": {
+      "12_and_younger": 7,
+      "13": 7,
+      "14": 17,
+      "15": 18,
+      "16": 32,
+      "17": 28,
+      "18_and_older": 3
+    }
+  },
+  {
+    "provider": "Ouachita Children Youth and Family Services",
+    "male": 81,
+    "female": 78,
+    "total": 159,
+    "ageBreakdown": {
+      "12_and_younger": 17,
+      "13": 15,
+      "14": 18,
+      "15": 42,
+      "16": 24,
+      "17": 40,
+      "18_and_older": 3
+    }
+  },
+  {
+    "provider": "Phoenix Youth and Family Services, Inc.",
+    "male": 63,
+    "female": 38,
+    "total": 101,
+    "ageBreakdown": {
+      "12_and_younger": 10,
+      "13": 6,
+      "14": 25,
+      "15": 15,
+      "16": 20,
+      "17": 22,
+      "18_and_older": 3
+    }
+  },
+  {
+    "provider": "Professional Counseling Associates",
+    "male": 32,
+    "female": 19,
+    "total": 51,
+    "ageBreakdown": {
+      "12_and_younger": 10,
+      "13": 6,
+      "14": 10,
+      "15": 8,
+      "16": 13,
+      "17": 4,
+      "18_and_older": 0
+    }
+  },
+  {
+    "provider": "Southwest Arkansas Counseling and Mental Health Center, Inc.",
+    "male": 221,
+    "female": 81,
+    "total": 302,
+    "ageBreakdown": {
+      "12_and_younger": 48,
+      "13": 36,
+      "14": 32,
+      "15": 62,
+      "16": 62,
+      "17": 56,
+      "18_and_older": 6
+    }
+  },
+  {
+    "provider": "United Family Services, Inc.",
+    "male": 317,
+    "female": 120,
+    "total": 437,
+    "ageBreakdown": {
+      "12_and_younger": 25,
+      "13": 46,
+      "14": 52,
+      "15": 101,
+      "16": 94,
+      "17": 101,
+      "18_and_older": 18
+    }
+  },
+  {
+    "provider": "Youth Bridge, Inc.",
+    "male": 464,
+    "female": 261,
+    "total": 725,
+    "ageBreakdown": {
+      "12_and_younger": 160,
+      "13": 57,
+      "14": 91,
+      "15": 121,
+      "16": 152,
+      "17": 143,
+      "18_and_older": 1
+    }
+  }
+]
