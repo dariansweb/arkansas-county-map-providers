@@ -113,3 +113,15 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const toggleBtn = document.getElementById("toggle-description");
+  const descriptionBox = document.getElementById("data-description");
+
+  toggleBtn.addEventListener("click", () => {
+    const isVisible = descriptionBox.style.display === "block";
+    descriptionBox.style.display = isVisible ? "none" : "block";
+    toggleBtn.textContent = isVisible ? "Show Map Explanation" : "Hide Map Explanation";
+  });
+});
+

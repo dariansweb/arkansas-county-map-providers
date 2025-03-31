@@ -108,6 +108,78 @@ main {
   background: linear-gradient(to right, #fff7ec, #fdae6b, #e6550d);
   border: 1px solid #ccc;
 }
+#cbp-panel-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.cbp-card {
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 1.25rem;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+  transition: transform 0.2s ease;
+}
+
+.cbp-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.cbp-card h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #1a237e;
+}
+
+.cbp-card ul {
+  list-style: none;
+  margin: 0.75rem 0 0;
+  padding: 0;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.cbp-card ul li {
+  margin: 0.3rem 0;
+}
+
+.cbp-card .badge {
+  display: inline-block;
+  background: #e0e0e0;
+  color: #333;
+  font-size: 0.75rem;
+  margin: 0.2rem;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.cbp-card .badge-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 0.75rem;
+}
+
+#toggle-description {
+  display: block;
+  margin: 1rem auto;
+  background-color: #004d40;
+  color: white;
+  padding: 8px 16px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+#toggle-description:hover {
+  background-color: #00796b;
+}
+
 
 footer {
   background-color: #eeeeee;

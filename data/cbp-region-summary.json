@@ -1,0 +1,167 @@
+[
+  {
+    "provider": "Comprehensive Juvenile Services",
+    "counties_served": [
+      "Crawford",
+      "Sebastian",
+      "Polk",
+      "Montgomery"
+    ],
+    "counties_count": 4,
+    "youth_population": 29182,
+    "avg_services": 325.4,
+    "services_per_1000_youth": 11.15
+  },
+  {
+    "provider": "Consolidated Youth Services",
+    "counties_served": [
+      "Clay",
+      "Randolph",
+      "Sharp",
+      "Lawrence",
+      "Greene",
+      "Craighead",
+      "Mississippi",
+      "Poinsett",
+      "Jackson",
+      "Crittenden"
+    ],
+    "counties_count": 10,
+    "youth_population": 49577,
+    "avg_services": 267.8,
+    "services_per_1000_youth": 5.4
+  },
+  {
+    "provider": "Conway County Community Services, Inc.",
+    "counties_served": [
+      "Washington",
+      "Madison",
+      "Boone",
+      "Marion",
+      "Baxter",
+      "Newton",
+      "Carroll",
+      "Benton",
+      "Johnson",
+      "Franklin",
+      "Pope",
+      "Logan",
+      "Scott",
+      "Yell",
+      "Conway",
+      "Izard",
+      "Fulton",
+      "Stone",
+      "Independence",
+      "Cleburne",
+      "Faulkner",
+      "Van Buren",
+      "Searcy"
+    ],
+    "counties_count": 23,
+    "youth_population": 153860,
+    "avg_services": 1298.8,
+    "services_per_1000_youth": 8.44
+  },
+  {
+    "provider": "Counseling Clinic, Inc.",
+    "counties_served": [
+      "Saline",
+      "Hot Spring",
+      "Grant"
+    ],
+    "counties_count": 3,
+    "youth_population": 22915,
+    "avg_services": 222.6,
+    "services_per_1000_youth": 9.71
+  },
+  {
+    "provider": "East Arkansas Youth Services, Inc.",
+    "counties_served": [
+      "Cross",
+      "Woodruff",
+      "St. Francis",
+      "Monroe",
+      "Lee",
+      "Phillips",
+      "White",
+      "Prairie"
+    ],
+    "counties_count": 8,
+    "youth_population": 21597,
+    "avg_services": 143.4,
+    "services_per_1000_youth": 6.64
+  },
+  {
+    "provider": "Ouachita Children Youth and Family Services",
+    "counties_served": [
+      "Clark",
+      "Garland"
+    ],
+    "counties_count": 2,
+    "youth_population": 14918,
+    "avg_services": 148.8,
+    "services_per_1000_youth": 9.97
+  },
+  {
+    "provider": "Phoenix Youth and Family Services, Inc.",
+    "counties_served": [
+      "Desha",
+      "Drew",
+      "Bradley",
+      "Ashley",
+      "Chicot"
+    ],
+    "counties_count": 5,
+    "youth_population": 9296,
+    "avg_services": 133.2,
+    "services_per_1000_youth": 14.33
+  },
+  {
+    "provider": "Professional Counseling Associates, Inc.",
+    "counties_served": [
+      "Lonoke"
+    ],
+    "counties_count": 1,
+    "youth_population": 10598,
+    "avg_services": 54.6,
+    "services_per_1000_youth": 5.15
+  },
+  {
+    "provider": "Southwest Arkansas Counseling and Mental Health Center, Inc.",
+    "counties_served": [
+      "Hempstead",
+      "Nevada",
+      "Miller",
+      "Lafayette",
+      "Columbia",
+      "Ouachita",
+      "Calhoun",
+      "Cleveland",
+      "Dallas",
+      "Sevier",
+      "Howard",
+      "Little River",
+      "Union",
+      "Pike"
+    ],
+    "counties_count": 14,
+    "youth_population": 31486,
+    "avg_services": 315.2,
+    "services_per_1000_youth": 10.01
+  },
+  {
+    "provider": "United Family Services, Inc.",
+    "counties_served": [
+      "Perry",
+      "Pulaski",
+      "Arkansas",
+      "Jefferson",
+      "Lincoln"
+    ],
+    "counties_count": 5,
+    "youth_population": 64393,
+    "avg_services": 405.8,
+    "services_per_1000_youth": 6.3
+  }
+]
