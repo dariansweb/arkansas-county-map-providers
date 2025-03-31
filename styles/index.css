@@ -180,6 +180,17 @@ main {
   background-color: #00796b;
 }
 
+.sparkline {
+  margin-top: 1rem;
+  text-align: center;
+}
+.top5-description {
+  max-width: 700px;
+  margin: 0.5rem auto 1rem;
+  font-size: 0.95rem;
+  color: #444;
+  text-align: left;
+}
 
 footer {
   background-color: #eeeeee;

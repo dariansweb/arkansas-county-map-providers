@@ -125,3 +125,58 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+document.addEventListener("DOMContentLoaded", () => {
+  fetch("data/cbp-region-summary.json")
+    .then(res => res.json())
+    .then(data => {
+      const top5 = data
+        .sort((a, b) => a.services_per_1000_youth - b.services_per_1000_youth)
+        .slice(0, 5);
+
+      const margin = { top: 30, right: 30, bottom: 30, left: 160 };
+      const width = 800;
+      const height = 300;
+
+      const svg = d3.select("#top5-chart")
+        .append("svg")
+        .attr("width", width)
+        .attr("height", height);
+
+      const x = d3.scaleLinear()
+        .domain([0, d3.max(top5, d => d.services_per_1000_youth)])
+        .range([margin.left, width - margin.right]);
+
+      const y = d3.scaleBand()
+        .domain(top5.map(d => d.provider))
+        .range([margin.top, height - margin.bottom])
+        .padding(0.2);
+
+      svg.append("g")
+        .call(d3.axisLeft(y))
+        .attr("transform", `translate(${margin.left},0)`);
+
+      svg.append("g")
+        .attr("transform", `translate(0,${height - margin.bottom})`)
+        .call(d3.axisBottom(x));
+
+      svg.selectAll("rect")
+        .data(top5)
+        .enter()
+        .append("rect")
+        .attr("x", margin.left)
+        .attr("y", d => y(d.provider))
+        .attr("width", d => x(d.services_per_1000_youth) - margin.left)
+        .attr("height", y.bandwidth())
+        .attr("fill", "#f44336");
+
+      svg.selectAll("text.value")
+        .data(top5)
+        .enter()
+        .append("text")
+        .attr("x", d => x(d.services_per_1000_youth) + 5)
+        .attr("y", d => y(d.provider) + y.bandwidth() / 2 + 4)
+        .text(d => d.services_per_1000_youth)
+        .attr("fill", "#333")
+        .style("font-size", "0.8rem");
+    });
+});

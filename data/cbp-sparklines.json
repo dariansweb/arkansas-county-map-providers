@@ -1,0 +1,222 @@
+{
+  "Comprehensive Juvenile Services": [
+    {
+      "year": 2020,
+      "services": 247
+    },
+    {
+      "year": 2021,
+      "services": 307
+    },
+    {
+      "year": 2022,
+      "services": 291
+    },
+    {
+      "year": 2023,
+      "services": 393
+    },
+    {
+      "year": 2024,
+      "services": 389
+    }
+  ],
+  "Consolidated Youth Services": [
+    {
+      "year": 2020,
+      "services": 251
+    },
+    {
+      "year": 2021,
+      "services": 255
+    },
+    {
+      "year": 2022,
+      "services": 292
+    },
+    {
+      "year": 2023,
+      "services": 256
+    },
+    {
+      "year": 2024,
+      "services": 285
+    }
+  ],
+  "Conway County Community Services, Inc.": [
+    {
+      "year": 2020,
+      "services": 706
+    },
+    {
+      "year": 2021,
+      "services": 1150
+    },
+    {
+      "year": 2022,
+      "services": 1403
+    },
+    {
+      "year": 2023,
+      "services": 1564
+    },
+    {
+      "year": 2024,
+      "services": 1671
+    }
+  ],
+  "Counseling Clinic, Inc.": [
+    {
+      "year": 2020,
+      "services": 162
+    },
+    {
+      "year": 2021,
+      "services": 162
+    },
+    {
+      "year": 2022,
+      "services": 224
+    },
+    {
+      "year": 2023,
+      "services": 241
+    },
+    {
+      "year": 2024,
+      "services": 324
+    }
+  ],
+  "East Arkansas Youth Services, Inc.": [
+    {
+      "year": 2020,
+      "services": 112
+    },
+    {
+      "year": 2021,
+      "services": 129
+    },
+    {
+      "year": 2022,
+      "services": 177
+    },
+    {
+      "year": 2023,
+      "services": 135
+    },
+    {
+      "year": 2024,
+      "services": 164
+    }
+  ],
+  "Ouachita Children Youth and Family Services": [
+    {
+      "year": 2020,
+      "services": 159
+    },
+    {
+      "year": 2021,
+      "services": 130
+    },
+    {
+      "year": 2022,
+      "services": 151
+    },
+    {
+      "year": 2023,
+      "services": 145
+    },
+    {
+      "year": 2024,
+      "services": 159
+    }
+  ],
+  "Phoenix Youth and Family Services, Inc.": [
+    {
+      "year": 2020,
+      "services": 101
+    },
+    {
+      "year": 2021,
+      "services": 90
+    },
+    {
+      "year": 2022,
+      "services": 149
+    },
+    {
+      "year": 2023,
+      "services": 168
+    },
+    {
+      "year": 2024,
+      "services": 158
+    }
+  ],
+  "Professional Counseling Associates, Inc.": [
+    {
+      "year": 2020,
+      "services": 51
+    },
+    {
+      "year": 2021,
+      "services": 53
+    },
+    {
+      "year": 2022,
+      "services": 36
+    },
+    {
+      "year": 2023,
+      "services": 61
+    },
+    {
+      "year": 2024,
+      "services": 72
+    }
+  ],
+  "Southwest Arkansas Counseling and Mental Health Center, Inc.": [
+    {
+      "year": 2020,
+      "services": 302
+    },
+    {
+      "year": 2021,
+      "services": 293
+    },
+    {
+      "year": 2022,
+      "services": 355
+    },
+    {
+      "year": 2023,
+      "services": 338
+    },
+    {
+      "year": 2024,
+      "services": 288
+    }
+  ],
+  "United Family Services, Inc.": [
+    {
+      "year": 2020,
+      "services": 437
+    },
+    {
+      "year": 2021,
+      "services": 305
+    },
+    {
+      "year": 2022,
+      "services": 417
+    },
+    {
+      "year": 2023,
+      "services": 446
+    },
+    {
+      "year": 2024,
+      "services": 424
+    }
+  ]
+}

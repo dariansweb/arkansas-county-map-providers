@@ -1,6 +1,6 @@
 [
   {
-    "provider": "Comprehensive Juvenile Services",
+    "provider": "CJS",
     "counties_served": [
       "Crawford",
       "Sebastian",
@@ -13,7 +13,7 @@
     "services_per_1000_youth": 11.15
   },
   {
-    "provider": "Consolidated Youth Services",
+    "provider": "CYS",
     "counties_served": [
       "Clay",
       "Randolph",
@@ -32,7 +32,7 @@
     "services_per_1000_youth": 5.4
   },
   {
-    "provider": "Conway County Community Services, Inc.",
+    "provider": "CSI",
     "counties_served": [
       "Washington",
       "Madison",
@@ -64,7 +64,7 @@
     "services_per_1000_youth": 8.44
   },
   {
-    "provider": "Counseling Clinic, Inc.",
+    "provider": "CCI",
     "counties_served": [
       "Saline",
       "Hot Spring",
@@ -76,7 +76,7 @@
     "services_per_1000_youth": 9.71
   },
   {
-    "provider": "East Arkansas Youth Services, Inc.",
+    "provider": "EAYS",
     "counties_served": [
       "Cross",
       "Woodruff",
@@ -93,7 +93,7 @@
     "services_per_1000_youth": 6.64
   },
   {
-    "provider": "Ouachita Children Youth and Family Services",
+    "provider": "OCC",
     "counties_served": [
       "Clark",
       "Garland"
@@ -104,7 +104,7 @@
     "services_per_1000_youth": 9.97
   },
   {
-    "provider": "Phoenix Youth and Family Services, Inc.",
+    "provider": "PYFS.",
     "counties_served": [
       "Desha",
       "Drew",
@@ -118,7 +118,7 @@
     "services_per_1000_youth": 14.33
   },
   {
-    "provider": "Professional Counseling Associates, Inc.",
+    "provider": "PCA",
     "counties_served": [
       "Lonoke"
     ],
@@ -128,7 +128,7 @@
     "services_per_1000_youth": 5.15
   },
   {
-    "provider": "Southwest Arkansas Counseling and Mental Health Center, Inc.",
+    "provider": "SWACMC",
     "counties_served": [
       "Hempstead",
       "Nevada",
@@ -151,7 +151,7 @@
     "services_per_1000_youth": 10.01
   },
   {
-    "provider": "United Family Services, Inc.",
+    "provider": "UFS",
     "counties_served": [
       "Perry",
       "Pulaski",
