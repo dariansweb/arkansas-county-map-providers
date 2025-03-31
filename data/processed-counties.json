@@ -1,0 +1,527 @@
+[
+  {
+    "county": "Crawford",
+    "population": 60119,
+    "youth_population": 8390,
+    "avg_services": 81.35,
+    "services_per_1000_youth": 9.7
+  },
+  {
+    "county": "Sebastian",
+    "population": 127797,
+    "youth_population": 17317,
+    "avg_services": 81.35,
+    "services_per_1000_youth": 4.7
+  },
+  {
+    "county": "Polk",
+    "population": 19213,
+    "youth_population": 2554,
+    "avg_services": 81.35,
+    "services_per_1000_youth": 31.85
+  },
+  {
+    "county": "Montgomery",
+    "population": 8482,
+    "youth_population": 921,
+    "avg_services": 81.35,
+    "services_per_1000_youth": 88.33
+  },
+  {
+    "county": "Clay",
+    "population": 14548,
+    "youth_population": 1758,
+    "avg_services": 26.78,
+    "services_per_1000_youth": 15.23
+  },
+  {
+    "county": "Randolph",
+    "population": 18574,
+    "youth_population": 2376,
+    "avg_services": 26.78,
+    "services_per_1000_youth": 11.27
+  },
+  {
+    "county": "Sharp",
+    "population": 17274,
+    "youth_population": 2055,
+    "avg_services": 26.78,
+    "services_per_1000_youth": 13.03
+  },
+  {
+    "county": "Lawrence",
+    "population": 16221,
+    "youth_population": 2199,
+    "avg_services": 26.78,
+    "services_per_1000_youth": 12.18
+  },
+  {
+    "county": "Greene",
+    "population": 45738,
+    "youth_population": 6254,
+    "avg_services": 26.78,
+    "services_per_1000_youth": 4.28
+  },
+  {
+    "county": "Craighead",
+    "population": 111242,
+    "youth_population": 16770,
+    "avg_services": 26.78,
+    "services_per_1000_youth": 1.6
+  },
+  {
+    "county": "Mississippi",
+    "population": 40682,
+    "youth_population": 5966,
+    "avg_services": 26.78,
+    "services_per_1000_youth": 4.49
+  },
+  {
+    "county": "Poinsett",
+    "population": 22965,
+    "youth_population": 3073,
+    "avg_services": 26.78,
+    "services_per_1000_youth": 8.71
+  },
+  {
+    "county": "Jackson",
+    "population": 16765,
+    "youth_population": 1856,
+    "avg_services": 26.78,
+    "services_per_1000_youth": 14.43
+  },
+  {
+    "county": "Crittenden",
+    "population": 48156,
+    "youth_population": 7270,
+    "avg_services": 26.78,
+    "services_per_1000_youth": 3.68
+  },
+  {
+    "county": "Washington",
+    "population": 245866,
+    "youth_population": 37426,
+    "avg_services": 56.47,
+    "services_per_1000_youth": 1.51
+  },
+  {
+    "county": "Madison",
+    "population": 16519,
+    "youth_population": 2134,
+    "avg_services": 56.47,
+    "services_per_1000_youth": 26.46
+  },
+  {
+    "county": "Boone",
+    "population": 37367,
+    "youth_population": 4772,
+    "avg_services": 56.47,
+    "services_per_1000_youth": 11.83
+  },
+  {
+    "county": "Marion",
+    "population": 16828,
+    "youth_population": 1798,
+    "avg_services": 56.47,
+    "services_per_1000_youth": 31.41
+  },
+  {
+    "county": "Baxter",
+    "population": 41628,
+    "youth_population": 4412,
+    "avg_services": 56.47,
+    "services_per_1000_youth": 12.8
+  },
+  {
+    "county": "Newton",
+    "population": 7228,
+    "youth_population": 852,
+    "avg_services": 56.47,
+    "services_per_1000_youth": 66.28
+  },
+  {
+    "county": "Carroll",
+    "population": 28257,
+    "youth_population": 3550,
+    "avg_services": 56.47,
+    "services_per_1000_youth": 15.91
+  },
+  {
+    "county": "Benton",
+    "population": 284340,
+    "youth_population": 41344,
+    "avg_services": 56.47,
+    "services_per_1000_youth": 1.37
+  },
+  {
+    "county": "Johnson",
+    "population": 25749,
+    "youth_population": 3728,
+    "avg_services": 56.47,
+    "services_per_1000_youth": 15.15
+  },
+  {
+    "county": "Franklin",
+    "population": 17103,
+    "youth_population": 2288,
+    "avg_services": 56.47,
+    "services_per_1000_youth": 24.68
+  },
+  {
+    "county": "Pope",
+    "population": 63384,
+    "youth_population": 9180,
+    "avg_services": 56.47,
+    "services_per_1000_youth": 6.15
+  },
+  {
+    "county": "Logan",
+    "population": 21128,
+    "youth_population": 2488,
+    "avg_services": 56.47,
+    "services_per_1000_youth": 22.7
+  },
+  {
+    "county": "Scott",
+    "population": 9838,
+    "youth_population": 1281,
+    "avg_services": 56.47,
+    "services_per_1000_youth": 44.08
+  },
+  {
+    "county": "Yell",
+    "population": 20256,
+    "youth_population": 2832,
+    "avg_services": 56.47,
+    "services_per_1000_youth": 19.94
+  },
+  {
+    "county": "Conway",
+    "population": 20710,
+    "youth_population": 2560,
+    "avg_services": 56.47,
+    "services_per_1000_youth": 22.06
+  },
+  {
+    "county": "Izard",
+    "population": 13578,
+    "youth_population": 1468,
+    "avg_services": 56.47,
+    "services_per_1000_youth": 38.47
+  },
+  {
+    "county": "Fulton",
+    "population": 12074,
+    "youth_population": 1498,
+    "avg_services": 56.47,
+    "services_per_1000_youth": 37.7
+  },
+  {
+    "county": "Stone",
+    "population": 12354,
+    "youth_population": 1391,
+    "avg_services": 56.47,
+    "services_per_1000_youth": 40.6
+  },
+  {
+    "county": "Independence",
+    "population": 37931,
+    "youth_population": 5529,
+    "avg_services": 56.47,
+    "services_per_1000_youth": 10.21
+  },
+  {
+    "county": "Cleburne",
+    "population": 24710,
+    "youth_population": 2827,
+    "avg_services": 56.47,
+    "services_per_1000_youth": 19.98
+  },
+  {
+    "county": "Faulkner",
+    "population": 123493,
+    "youth_population": 17759,
+    "avg_services": 56.47,
+    "services_per_1000_youth": 3.18
+  },
+  {
+    "county": "Van Buren",
+    "population": 15795,
+    "youth_population": 1828,
+    "avg_services": 56.47,
+    "services_per_1000_youth": 30.89
+  },
+  {
+    "county": "Searcy",
+    "population": 7828,
+    "youth_population": 915,
+    "avg_services": 56.47,
+    "services_per_1000_youth": 61.72
+  },
+  {
+    "county": "Saline",
+    "population": 123430,
+    "youth_population": 16691,
+    "avg_services": 74.2,
+    "services_per_1000_youth": 4.45
+  },
+  {
+    "county": "Hot Spring",
+    "population": 33044,
+    "youth_population": 3883,
+    "avg_services": 74.2,
+    "services_per_1000_youth": 19.11
+  },
+  {
+    "county": "Grant",
+    "population": 17960,
+    "youth_population": 2341,
+    "avg_services": 74.2,
+    "services_per_1000_youth": 31.7
+  },
+  {
+    "county": "Cross",
+    "population": 16828,
+    "youth_population": 2197,
+    "avg_services": 17.93,
+    "services_per_1000_youth": 8.16
+  },
+  {
+    "county": "Woodruff",
+    "population": 6272,
+    "youth_population": 733,
+    "avg_services": 17.93,
+    "services_per_1000_youth": 24.45
+  },
+  {
+    "county": "St. Francis",
+    "population": 23094,
+    "youth_population": 2633,
+    "avg_services": 17.93,
+    "services_per_1000_youth": 6.81
+  },
+  {
+    "county": "Monroe",
+    "population": 6802,
+    "youth_population": 747,
+    "avg_services": 17.93,
+    "services_per_1000_youth": 24.0
+  },
+  {
+    "county": "Lee",
+    "population": 8593,
+    "youth_population": 852,
+    "avg_services": 17.93,
+    "services_per_1000_youth": 21.04
+  },
+  {
+    "county": "Phillips",
+    "population": 16571,
+    "youth_population": 2382,
+    "avg_services": 17.93,
+    "services_per_1000_youth": 7.53
+  },
+  {
+    "county": "White",
+    "population": 76824,
+    "youth_population": 11107,
+    "avg_services": 17.93,
+    "services_per_1000_youth": 1.61
+  },
+  {
+    "county": "Prairie",
+    "population": 8287,
+    "youth_population": 946,
+    "avg_services": 17.93,
+    "services_per_1000_youth": 18.95
+  },
+  {
+    "county": "Clark",
+    "population": 21445,
+    "youth_population": 3486,
+    "avg_services": 74.4,
+    "services_per_1000_youth": 21.34
+  },
+  {
+    "county": "Garland",
+    "population": 100173,
+    "youth_population": 11432,
+    "avg_services": 74.4,
+    "services_per_1000_youth": 6.51
+  },
+  {
+    "county": "Desha",
+    "population": 11398,
+    "youth_population": 1682,
+    "avg_services": 26.64,
+    "services_per_1000_youth": 15.84
+  },
+  {
+    "county": "Drew",
+    "population": 17345,
+    "youth_population": 2326,
+    "avg_services": 26.64,
+    "services_per_1000_youth": 11.45
+  },
+  {
+    "county": "Bradley",
+    "population": 10545,
+    "youth_population": 1502,
+    "avg_services": 26.64,
+    "services_per_1000_youth": 17.74
+  },
+  {
+    "county": "Ashley",
+    "population": 19058,
+    "youth_population": 2456,
+    "avg_services": 26.64,
+    "services_per_1000_youth": 10.85
+  },
+  {
+    "county": "Chicot",
+    "population": 10211,
+    "youth_population": 1330,
+    "avg_services": 26.64,
+    "services_per_1000_youth": 20.03
+  },
+  {
+    "county": "Lonoke",
+    "population": 74012,
+    "youth_population": 10598,
+    "avg_services": 54.6,
+    "services_per_1000_youth": 5.15
+  },
+  {
+    "county": "Hempstead",
+    "population": 20069,
+    "youth_population": 2809,
+    "avg_services": 22.51,
+    "services_per_1000_youth": 8.02
+  },
+  {
+    "county": "Nevada",
+    "population": 8312,
+    "youth_population": 1091,
+    "avg_services": 22.51,
+    "services_per_1000_youth": 20.64
+  },
+  {
+    "county": "Miller",
+    "population": 42599,
+    "youth_population": 5602,
+    "avg_services": 22.51,
+    "services_per_1000_youth": 4.02
+  },
+  {
+    "county": "Lafayette",
+    "population": 6305,
+    "youth_population": 686,
+    "avg_services": 22.51,
+    "services_per_1000_youth": 32.82
+  },
+  {
+    "county": "Columbia",
+    "population": 22800,
+    "youth_population": 3576,
+    "avg_services": 22.51,
+    "services_per_1000_youth": 6.3
+  },
+  {
+    "county": "Ouachita",
+    "population": 22647,
+    "youth_population": 2903,
+    "avg_services": 22.51,
+    "services_per_1000_youth": 7.76
+  },
+  {
+    "county": "Calhoun",
+    "population": 4740,
+    "youth_population": 535,
+    "avg_services": 22.51,
+    "services_per_1000_youth": 42.08
+  },
+  {
+    "county": "Cleveland",
+    "population": 7550,
+    "youth_population": 1030,
+    "avg_services": 22.51,
+    "services_per_1000_youth": 21.86
+  },
+  {
+    "county": "Dallas",
+    "population": 6481,
+    "youth_population": 768,
+    "avg_services": 22.51,
+    "services_per_1000_youth": 29.32
+  },
+  {
+    "county": "Sevier",
+    "population": 15839,
+    "youth_population": 2582,
+    "avg_services": 22.51,
+    "services_per_1000_youth": 8.72
+  },
+  {
+    "county": "Howard",
+    "population": 12786,
+    "youth_population": 1835,
+    "avg_services": 22.51,
+    "services_per_1000_youth": 12.27
+  },
+  {
+    "county": "Little River",
+    "population": 12026,
+    "youth_population": 1508,
+    "avg_services": 22.51,
+    "services_per_1000_youth": 14.93
+  },
+  {
+    "county": "Union",
+    "population": 39050,
+    "youth_population": 5228,
+    "avg_services": 22.51,
+    "services_per_1000_youth": 4.31
+  },
+  {
+    "county": "Pike",
+    "population": 10169,
+    "youth_population": 1333,
+    "avg_services": 22.51,
+    "services_per_1000_youth": 16.89
+  },
+  {
+    "county": "Perry",
+    "population": 10018,
+    "youth_population": 1266,
+    "avg_services": 81.16,
+    "services_per_1000_youth": 64.11
+  },
+  {
+    "county": "Pulaski",
+    "population": 399125,
+    "youth_population": 50927,
+    "avg_services": 81.16,
+    "services_per_1000_youth": 1.59
+  },
+  {
+    "county": "Arkansas",
+    "population": 17148,
+    "youth_population": 2081,
+    "avg_services": 81.16,
+    "services_per_1000_youth": 39.0
+  },
+  {
+    "county": "Jefferson",
+    "population": 67258,
+    "youth_population": 8787,
+    "avg_services": 81.16,
+    "services_per_1000_youth": 9.24
+  },
+  {
+    "county": "Lincoln",
+    "population": 12936,
+    "youth_population": 1332,
+    "avg_services": 81.16,
+    "services_per_1000_youth": 60.93
+  }
+]

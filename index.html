@@ -5,58 +5,24 @@
     <title>Arkansas County DHS-DYS Heatmap</title>
     <link rel="stylesheet" href="./styles/index.css" />
     <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="scripts/mapRenderer.js" defer></script>
   </head>
   <body>
-    <header class="app-header">
-      <h1>Juvenile Justice Information Dashboard</h1>
+    <header>
+      <h1>Arkansas County DHS-DYS Youth Services Heatmap</h1>
+      <p>Showing average services delivered per 1,000 youth (ages 10–19) from 2020–2024</p>
     </header>
-    <div class="top-bar" id="stats-bar">
-      Show: All Districts | Total Commits: — | Per 1k Youth: —
-    </div>
 
-    <div class="main-layout">
-      <div class="left-panel">
-        <span id="districts">Districts</span>
-        <div id="district-buttons"></div>
+    <main>
+      <div id="map-container"></div>
+      <div id="legend">
+        <span>Low</span>
+        <div class="legend-bar"></div>
+        <span>High</span>
       </div>
-      <div class="map-container">
-        <div id="svg-container"></div>
-      </div>
-      <div class="right-panel">
-        <div class="info-box" id="info-box"></div>
-      </div>
-    </div>
-
-    <div class="tooltip" id="tooltip"></div>
-
-    <footer class="app-footer">
-      <p>
-        Built with ❤️ using open data from the
-        <a
-          href="https://gis.arkansas.gov/product/county-boundary-polygons/"
-          target="_blank"
-          rel="noopener"
-          >Arkansas GIS Office</a
-        >
-        and
-        <a
-          href="https://www.census.gov/data/tables/time-series/demo/popest/2020s-counties-detail.html"
-          target="_blank"
-          rel="noopener"
-          >U.S. Census Bureau</a
-        >.
-      </p>
-      <p>
-        View source on
-        <a
-          href="https://github.com/dariansweb/arkansas-county-map"
-          target="_blank"
-          rel="noopener"
-          >GitHub</a
-        >
-        — contributions welcome!
-      </p>
+    </main>
+    <footer>
+      <p>Created by Darian, visualized with D3.js & 🤘 from ChatGPT</p>
     </footer>
-    <script type="module" src="./scripts/index.js"></script>
   </body>
 </html>
