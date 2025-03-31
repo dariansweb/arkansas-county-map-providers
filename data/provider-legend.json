@@ -1,0 +1,137 @@
+{
+  "Comprehensive Juvenile Services": {
+    "color": "#0cedb5",
+    "counties": [
+      "Crawford",
+      "Sebastian",
+      "Polk",
+      "Montgomery"
+    ],
+    "avg_services": 325.4
+  },
+  "Consolidated Youth Services": {
+    "color": "#970fd6",
+    "counties": [
+      "Clay",
+      "Randolph",
+      "Sharp",
+      "Lawrence",
+      "Greene",
+      "Craighead",
+      "Mississippi",
+      "Poinsett",
+      "Jackson",
+      "Crittenden"
+    ],
+    "avg_services": 267.8
+  },
+  "Conway County Community Services, Inc.": {
+    "color": "#d6769b",
+    "counties": [
+      "Washington",
+      "Madison",
+      "Boone",
+      "Marion",
+      "Baxter",
+      "Newton",
+      "Carroll",
+      "Benton",
+      "Johnson",
+      "Franklin",
+      "Pope",
+      "Logan",
+      "Scott",
+      "Yell",
+      "Conway",
+      "Izard",
+      "Fulton",
+      "Stone",
+      "Independence",
+      "Cleburne",
+      "Faulkner",
+      "Van Buren",
+      "Searcy"
+    ],
+    "avg_services": 1298.8
+  },
+  "Counseling Clinic, Inc.": {
+    "color": "#c5110b",
+    "counties": [
+      "Saline",
+      "Hot Spring",
+      "Grant"
+    ],
+    "avg_services": 222.6
+  },
+  "East Arkansas Youth Services, Inc.": {
+    "color": "#d0f8b1",
+    "counties": [
+      "Cross",
+      "Woodruff",
+      "St. Francis",
+      "Monroe",
+      "Lee",
+      "Phillips",
+      "White",
+      "Prairie"
+    ],
+    "avg_services": 143.4
+  },
+  "Ouachita Children Youth and Family Services": {
+    "color": "#86d1af",
+    "counties": [
+      "Clark",
+      "Garland"
+    ],
+    "avg_services": 148.8
+  },
+  "Phoenix Youth and Family Services, Inc.": {
+    "color": "#061bfc",
+    "counties": [
+      "Desha",
+      "Drew",
+      "Bradley",
+      "Ashley",
+      "Chicot"
+    ],
+    "avg_services": 133.2
+  },
+  "Professional Counseling Associates, Inc.": {
+    "color": "#be5638",
+    "counties": [
+      "Lonoke"
+    ],
+    "avg_services": 54.6
+  },
+  "Southwest Arkansas Counseling and Mental Health Center, Inc.": {
+    "color": "#f62962",
+    "counties": [
+      "Hempstead",
+      "Nevada",
+      "Miller",
+      "Lafayette",
+      "Columbia",
+      "Ouachita",
+      "Calhoun",
+      "Cleveland",
+      "Dallas",
+      "Sevier",
+      "Howard",
+      "Little River",
+      "Union",
+      "Pike"
+    ],
+    "avg_services": 315.2
+  },
+  "United Family Services, Inc.": {
+    "color": "#5d2bcc",
+    "counties": [
+      "Perry",
+      "Pulaski",
+      "Arkansas",
+      "Jefferson",
+      "Lincoln"
+    ],
+    "avg_services": 405.8
+  }
+}

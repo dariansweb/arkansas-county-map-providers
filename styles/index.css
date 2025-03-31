@@ -10,8 +10,8 @@ header {
   background-color: #264653;
   color: #fff;
   padding: 1rem 0;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1;
   position: sticky;
 }
 
@@ -32,6 +32,53 @@ main {
 #map-container svg {
   max-width: 95%;
   height: auto;
+}
+
+#map-controls {
+  margin: 1rem auto;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  font-size: 1.1rem;
+}
+
+#data-description {
+  max-width: 800px;
+  margin: 2rem auto;
+  text-align: left;
+  padding: 1rem;
+  background: #fefefe;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+#provider-legend {
+  max-width: 600px;
+  margin: 2rem auto;
+  text-align: left;
+  padding: 1rem;
+  background: #fafafa;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+#legend-list {
+  list-style: none;
+  padding: 0;
+}
+
+#legend-list li {
+  display: flex;
+  align-items: center;
+  margin: 5px 0;
+}
+
+#legend-list span.color-box {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  border: 1px solid #999;
 }
 
 .tooltip {

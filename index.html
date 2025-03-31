@@ -1,28 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Arkansas County DHS-DYS Heatmap</title>
-    <link rel="stylesheet" href="./styles/index.css" />
-    <script src="https://d3js.org/d3.v7.min.js"></script>
-    <script src="scripts/mapRenderer.js" defer></script>
-  </head>
-  <body>
-    <header>
-      <h1>Arkansas County DHS-DYS Youth Services Heatmap</h1>
-      <p>Showing average services delivered per 1,000 youth (ages 10–19) from 2020–2024</p>
-    </header>
 
-    <main>
-      <div id="map-container"></div>
-      <div id="legend">
-        <span>Low</span>
-        <div class="legend-bar"></div>
-        <span>High</span>
-      </div>
-    </main>
-    <footer>
-      <p>Created by Darian, visualized with D3.js & 🤘 from ChatGPT</p>
-    </footer>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <title>Arkansas County DHS-DYS Heatmap</title>
+  <link rel="stylesheet" href="./styles/index.css" />
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script src="scripts/mapRenderer.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <h1>Juvenile Justice Information Dashboard</h1>
+    <p>Showing average services delivered per 1,000 youth (ages 10–19) from 2020–2024</p>
+  </header>
+
+  <main>
+    <section id="map-controls">
+      <label><input type="radio" name="mapMode" value="heatmap" checked /> Heatmap</label>
+      <label><input type="radio" name="mapMode" value="providers" /> Provider Coverage</label>
+    </section>
+    <section id="provider-legend">
+      <h3>Provider Legend</h3>
+      <ul id="legend-list"></ul>
+    </section>
+  
+    <div id="map-container"></div>
+    <div id="legend">
+      <span>Low</span>
+      <div class="legend-bar"></div>
+      <span>High</span>
+    </div>
+  </main>
+
+  <section id="data-description">
+    <h2>What are you seeing?</h2>
+    <p>
+      This map shows youth services provided by Arkansas Community-Based Providers (CBPs) from 2020–2024.
+      You can toggle between two views:
+    </p>
+    <ul>
+      <li><strong>Heatmap</strong> – services delivered per 1,000 youth (ages 10–19)</li>
+      <li><strong>Provider Coverage</strong> – which CBP serves each county and their average service volume</li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>Created by Darian, visualized with D3.js & 🤘 from ChatGPT</p>
+  </footer>
+</body>
+
 </html>
