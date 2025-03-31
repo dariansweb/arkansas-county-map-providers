@@ -1,16 +1,22 @@
-[
+export const providers = [
   {
     "provider": "Comprehensive Juvenile Services",
     "code": "CJS",
-    "district": "12",
-    "counties": ["Sebastian"],
+    "district": ["12", "18W", "21"],
+    "region": ["5"],
+    "counties": [
+      "Crawford",
+      "Sebastian",
+      "Polk",
+      "Montgomery"
+    ],
     "2020": {
       "male": 149,
       "female": 98,
       "total": 247,
       "ageBreakdown": {
         "12_and_younger": 10,
-        "13": 10,
+        "13": 19,
         "14": 35,
         "15": 53,
         "16": 63,
@@ -65,7 +71,7 @@
       "female": 132,
       "total": 389,
       "ageBreakdown": {
-        "12_and_younger": 20,
+        "12_and_younger": 29,
         "13": 48,
         "14": 67,
         "15": 79,
@@ -78,14 +84,19 @@
   {
     "provider": "Consolidated Youth Services",
     "code": "CYS",
-    "district": "2",
+    "district": ["2", "3"],
+    "region": ["2"],
     "counties": [
-      "Crittenden",
+      "Clay",
+      "Randolph",
+      "Sharp",
+      "Lawrence",
+      "Greene",
+      "Craighead",
       "Mississippi",
       "Poinsett",
-      "Craighead",
-      "Greene",
-      "Clay"
+      "Jackson",
+      "Crittenden"
     ],
     "2020": {
       "male": 176,
@@ -116,9 +127,9 @@
       }
     },
     "2022": {
-      "male": 192,
-      "female": 99,
-      "total": 291,
+      "male": 198,
+      "female": 94,
+      "total": 292,
       "ageBreakdown": {
         "12_and_younger": 24,
         "13": 38,
@@ -161,8 +172,33 @@
   {
     "provider": "Conway County Community Services, Inc.",
     "code": "CSI",
-    "district": "15",
-    "counties": ["Scott", "Logan", "Yell", "Conway"],
+    "district": ["4", "14", "19E", "19W", "5", "15", "16", "20"],
+    "region": ["1", "3"],
+    "counties": [
+      "Washington",
+      "Madison",
+      "Boone",
+      "Marion",
+      "Baxter",
+      "Newton",
+      "Carroll",
+      "Benton",
+      "Johnson",
+      "Franklin",
+      "Pope",
+      "Logan",
+      "Scott",
+      "Yell",
+      "Conway",
+      "Izard",
+      "Fulton",
+      "Stone",
+      "Independence",
+      "Cleburne",
+      "Faulkner",
+      "Van Buren",
+      "Searcy"
+    ],
     "2020": {
       "male": 457,
       "female": 249,
@@ -237,8 +273,13 @@
   {
     "provider": "Counseling Clinic, Inc.",
     "code": "CCI",
-    "district": "22",
-    "counties": ["Saline"],
+    "district": ["7","22"],
+    "region": ["7"],
+    "counties": [
+      "Saline",
+      "Hot Spring",
+      "Grant",
+    ],
     "2020": {
       "male": 114,
       "female": 48,
@@ -313,8 +354,18 @@
   {
     "provider": "East Arkansas Youth Services, Inc.",
     "code": "EAYS",
-    "district": "2",
-    "counties": ["Crittenden"],
+    "district": ["1", "17"],
+    "region": ["4"],
+    "counties": [
+      "Cross",
+      "Woodruff",
+      "St. Francis",
+      "Monroe",
+      "Lee",
+      "Phillips",
+      "White",
+      "Prairie"
+    ],
     "2020": {
       "male": 81,
       "female": 31,
@@ -389,8 +440,12 @@
   {
     "provider": "Ouachita Children Youth and Family Services",
     "code": "OCC",
-    "district": "18E",
-    "counties": ["Garland"],
+    "district": ["9E", "18E"],
+    "region": ["9"],
+    "counties": [
+      "Clark",
+      "Garland"
+    ],
     "2020": {
       "male": 81,
       "female": 78,
@@ -465,20 +520,27 @@
   {
     "provider": "Phoenix Youth and Family Services, Inc.",
     "code": "PYFS",
-    "district": "10",
-    "counties": ["Ashley", "Bradley", "Drew", "Desha"],
+    "district": ["10"],
+    "region": ["10"],
+    "counties": [
+      "Desha",
+      "Drew",
+      "Bradley",
+      "Ashley",
+      "Chicot"
+    ],
     "2020": {
-      "male": 32,
-      "female": 19,
+      "male": 63,
+      "female": 38,
       "total": 101,
       "ageBreakdown": {
         "12_and_younger": 10,
         "13": 6,
-        "14": 10,
-        "15": 8,
-        "16": 13,
-        "17": 4,
-        "18_and_older": 0
+        "14": 25,
+        "15": 15,
+        "16": 20,
+        "17": 22,
+        "18_and_older": 3
       }
     },
     "2021": {
@@ -528,6 +590,85 @@
       "female": 61,
       "total": 158,
       "ageBreakdown": {
+        "12_and_younger": 23,
+        "13": 25,
+        "14": 34,
+        "15": 28,
+        "16": 29,
+        "17": 17,
+        "18_and_older": 2
+      }
+    }
+  },
+  {
+    "provider": "Professional Counseling Associates, Inc.",
+    "code": "PCA",
+    "district": ["23"],
+    "region": ["8"],
+    "counties": [
+      "Lonoke"
+    ],
+    "2020": {
+      "male": 32,
+      "female": 19,
+      "total": 51,
+      "ageBreakdown": {
+        "12_and_younger": 10,
+        "13": 6,
+        "14": 10,
+        "15": 8,
+        "16": 13,
+        "17": 4,
+        "18_and_older": 0
+      }
+    },
+    "2021": {
+      "male": 37,
+      "female": 16,
+      "total": 53,
+      "ageBreakdown": {
+        "12_and_younger": 2,
+        "13": 2,
+        "14": 14,
+        "15": 10,
+        "16": 11,
+        "17": 14,
+        "18_and_older": 0
+      }
+    },
+    "2022": {
+      "male": 21,
+      "female": 15,
+      "total": 36,
+      "ageBreakdown": {
+        "12_and_younger": 1,
+        "13": 4,
+        "14": 2,
+        "15": 12,
+        "16": 7,
+        "17": 8,
+        "18_and_older": 2
+      }
+    },
+    "2023": {
+      "male": 41,
+      "female": 20,
+      "total": 61,
+      "ageBreakdown": {
+        "12_and_younger": 7,
+        "13": 7,
+        "14": 4,
+        "15": 16,
+        "16": 17,
+        "17": 10,
+        "18_and_older": 0
+      }
+    },
+    "2024": {
+      "male": 48,
+      "female": 24,
+      "total": 72,
+      "ageBreakdown": {
         "12_and_younger": 15,
         "13": 10,
         "14": 7,
@@ -537,12 +678,28 @@
         "18_and_older": 1
       }
     }
-  },
+  },  
   {
     "provider": "Southwest Arkansas Counseling and Mental Health Center, Inc.",
     "code": "SWACMH",
-    "district": "8S",
-    "counties": ["Miller", "Lafayette"],
+    "district": ["8N", "8S", "9W", "13"],
+    "region": ["11"],
+    "counties": [
+      "Hempstead",
+      "Nevada", 
+      "Miller", 
+      "LaFayette", 
+      "Columbia",
+      "Ouachita",
+      "Calhoun",
+      "Cleveland",
+      "Dallas",
+      "Sevier",
+      "Howard",
+      "Little River",
+      "Union",
+      "Pike"
+    ],
     "2020": {
       "male": 221,
       "female": 81,
@@ -617,8 +774,15 @@
   {
     "provider": "United Family Services, Inc.",
     "code": "UFS",
-    "district": "11W",
-    "counties": ["Jefferson", "Lincoln"],
+    "district": ["6", "11E", "11W"],
+    "region": ["6"],
+    "counties": [
+      "Perry",
+      "Pulaski", 
+      "Arkansas",
+      "Jefferson",
+      "Lincoln"
+    ],
     "2020": {
       "male": 317,
       "female": 120,
@@ -689,81 +853,5 @@
         "18_and_older": 13
       }
     }
-  },
-  {
-    "provider": "Youth Bridge, Inc",
-    "code": "YBI",
-    "district": "11W",
-    "counties": ["Pulaski", "Saline", "Garland"],
-    "2020": {
-      "male": 464,
-      "female": 261,
-      "total": 725,
-      "ageBreakdown": {
-        "12_and_younger": 48,
-        "13": 36,
-        "14": 32,
-        "15": 62,
-        "16": 62,
-        "17": 56,
-        "18_and_older": 6
-      }
-    },
-    "2021": {
-      "male": 0,
-      "female": 0,
-      "total": 0,
-      "ageBreakdown": {
-        "12_and_younger": 0,
-        "13": 0,
-        "14": 0,
-        "15": 0,
-        "16": 0,
-        "17": 0,
-        "18_and_older": 0
-      }
-    },
-    "2022": {
-      "male": 0,
-      "female": 0,
-      "total": 0,
-      "ageBreakdown": {
-        "12_and_younger": 0,
-        "13": 0,
-        "14": 0,
-        "15": 0,
-        "16": 0,
-        "17": 0,
-        "18_and_older": 0
-      }
-    },
-    "2023": {
-      "male": 0,
-      "female": 0,
-      "total": 0,
-      "ageBreakdown": {
-        "12_and_younger": 0,
-        "13": 0,
-        "14": 0,
-        "15": 0,
-        "16": 0,
-        "17": 0,
-        "18_and_older": 0
-      }
-    },
-    "2024": {
-      "male": 0,
-      "female": 0,
-      "total": 0,
-      "ageBreakdown": {
-        "12_and_younger": 0,
-        "13": 0,
-        "14": 0,
-        "15": 0,
-        "16": 0,
-        "17": 0,
-        "18_and_older": 0
-      }
-    }
   }
-]
+];

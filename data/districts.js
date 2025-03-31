@@ -59,7 +59,8 @@ export const districtData = {
     "Ashley",
     "Bradley",
     "Drew",
-    "Desha"
+    "Desha",
+    "Chicot"
   ],
   "11E": [
     "Arkansas"
@@ -109,10 +110,12 @@ export const districtData = {
     "Polk",
     "Montgomery"
   ],
-  "19W": [
-    "Benton",
+  "19E": [
     "Carroll"
-  ], 
+  ],
+  "19W": [
+    "Benton"
+  ],
   "20": [
     "Searcy", 
     "Van Buren",
