@@ -1,3 +1,7 @@
+document.getElementById("close-modal").onclick = () => {
+  document.getElementById("county-modal").classList.add("hidden");
+};
+
 document.addEventListener("DOMContentLoaded", function () {
   const mapContainer = document.getElementById("map-container");
   const legendList = document.getElementById("legend-list");
@@ -80,13 +84,19 @@ document.addEventListener("DOMContentLoaded", function () {
   // Define heatmap color scale
   let heatColor;
 
-  // Load all required data
   Promise.all([
     fetch("data/COUNTY_BOUNDARY.svg").then((res) => res.text()),
     fetch("data/processed-counties.json").then((res) => res.json()),
     fetch("data/provider-coverage.json").then((res) => res.json()),
     fetch("data/provider-legend.json").then((res) => res.json()),
   ]).then(([svgText, countyData, providerMap, legendMap]) => {
+
+    
+    // ✅ Make this global so other parts of app can access it
+    window.countyData = countyData;
+    window.providerCoverage = providerMap;
+    window.providerLegend = legendMap;
+
     // Store references
     countyData.forEach((d) => (countyDataMap[d.county] = d));
     providerDataMap = providerMap;
@@ -99,6 +109,12 @@ document.addEventListener("DOMContentLoaded", function () {
     // Load the SVG into the map container
     mapContainer.innerHTML = svgText;
     const svg = d3.select("#map-container svg");
+
+    svg.selectAll("path").on("click", function () {
+      const rawId = d3.select(this).attr("id"); // e.g., "FULTON"
+      const countyName = titleCase(rawId); // becomes "Fulton"
+      showCountyModal(countyName);
+    });
 
     // Initial render
     renderLegend(currentMode);
@@ -141,7 +157,6 @@ document.addEventListener("DOMContentLoaded", () => {
         .slice(0, 5);
 
       const margin = { top: 30, right: 30, bottom: 30, left: 160 };
-      const width = 800;
       const height = 300;
 
       const svg = d3
@@ -195,3 +210,78 @@ document.addEventListener("DOMContentLoaded", () => {
         .style("font-size", "0.8rem");
     });
 });
+
+function getCountyDataByName(name) {
+  const normalized = name.trim().toLowerCase();
+  return window.countyData.find((c) => {
+    const n = c.name?.trim().toLowerCase();
+    return n === normalized || n === normalized + " county";
+  });
+}
+
+// Helper function
+function getProviderNameFromCode(code) {
+  const match = providers.find((p) => p.code === code);
+  return match?.provider || code;
+}
+
+function titleCase(str) {
+  return str
+    .toLowerCase()
+    .split(" ")
+    .map((word) => word[0].toUpperCase() + word.slice(1))
+    .join(" ");
+}
+
+function showCountyModal(countyName) {
+  const modal = document.getElementById("county-modal");
+  const nameHeader = document.getElementById("modal-county-name");
+  const container = document.getElementById("modal-data-container");
+
+  nameHeader.textContent = countyName;
+
+  const county = getCountyDataByName(countyName);
+  const coverageEntry = window.providerCoverage[countyName];
+  const provider = coverageEntry?.provider;
+
+  // console.log("🔎 County keys in countyData:", Object.keys(window.countyData));
+  // console.log("👆 Is 'Fulton' in countyData?", !!getCountyDataByName("Fulton"));
+  console.log("🔥 County clicked:", countyName);
+  console.log("📦 countyData exists?", !!window.countyData);
+  console.log(
+    "🧠 First 3 entries in countyData:",
+    window.countyData?.slice(0, 3)
+  );
+  console.log(
+    "🔎 Does it include:",
+    countyName,
+    "=>",
+    window.countyData?.some(
+      (c) => c.name?.trim().toLowerCase() === countyName.trim().toLowerCase()
+    )
+  );
+  console.log("🔍 Actual names in countyData:");
+  window.countyData.forEach((c, i) => {
+    console.log(i, JSON.stringify(c.name));
+  });
+
+  if (!county) {
+    container.innerHTML = `<p>🚫 No population data found for ${countyName}</p>`;
+  } else {
+    const youth = county.age10_14.total + county.age15_19.total;
+
+    container.innerHTML = `
+      <p><strong>Total Population:</strong> ${county.pop.toLocaleString()}</p>
+      <p><strong>Youth (10–19):</strong> ${youth.toLocaleString()}</p>
+      <p><strong>CBP Provider:</strong> ${provider || "Unknown"}</p>
+      <p><strong>Age 10–14:</strong> ${county.age10_14.total} (M: ${
+      county.age10_14.male
+    }, F: ${county.age10_14.female})</p>
+      <p><strong>Age 15–19:</strong> ${county.age15_19.total} (M: ${
+      county.age15_19.male
+    }, F: ${county.age15_19.female})</p>
+    `;
+  }
+
+  modal.classList.remove("hidden");
+}

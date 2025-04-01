@@ -1,376 +1,376 @@
 {
   "Crawford": {
-    "provider": "Comprehensive Juvenile Services",
+    "provider": "CJS",
     "color": "#0cedb5",
     "avg_services": 325.4
   },
   "Sebastian": {
-    "provider": "Comprehensive Juvenile Services",
+    "provider": "CJS",
     "color": "#0cedb5",
     "avg_services": 325.4
   },
   "Polk": {
-    "provider": "Comprehensive Juvenile Services",
+    "provider": "CJS",
     "color": "#0cedb5",
     "avg_services": 325.4
   },
   "Montgomery": {
-    "provider": "Comprehensive Juvenile Services",
+    "provider": "CJS",
     "color": "#0cedb5",
     "avg_services": 325.4
   },
   "Clay": {
-    "provider": "Consolidated Youth Services",
+    "provider": "CYS",
     "color": "#970fd6",
     "avg_services": 267.8
   },
   "Randolph": {
-    "provider": "Consolidated Youth Services",
+    "provider": "CYS",
     "color": "#970fd6",
     "avg_services": 267.8
   },
   "Sharp": {
-    "provider": "Consolidated Youth Services",
+    "provider": "CYS",
     "color": "#970fd6",
     "avg_services": 267.8
   },
   "Lawrence": {
-    "provider": "Consolidated Youth Services",
+    "provider": "CYS",
     "color": "#970fd6",
     "avg_services": 267.8
   },
   "Greene": {
-    "provider": "Consolidated Youth Services",
+    "provider": "CYS",
     "color": "#970fd6",
     "avg_services": 267.8
   },
   "Craighead": {
-    "provider": "Consolidated Youth Services",
+    "provider": "CYS",
     "color": "#970fd6",
     "avg_services": 267.8
   },
   "Mississippi": {
-    "provider": "Consolidated Youth Services",
+    "provider": "CYS",
     "color": "#970fd6",
     "avg_services": 267.8
   },
   "Poinsett": {
-    "provider": "Consolidated Youth Services",
+    "provider": "CYS",
     "color": "#970fd6",
     "avg_services": 267.8
   },
   "Jackson": {
-    "provider": "Consolidated Youth Services",
+    "provider": "CYS",
     "color": "#970fd6",
     "avg_services": 267.8
   },
   "Crittenden": {
-    "provider": "Consolidated Youth Services",
+    "provider": "CYS",
     "color": "#970fd6",
     "avg_services": 267.8
   },
   "Washington": {
-    "provider": "Conway County Community Services, Inc.",
+    "provider": "CSI",
     "color": "#d6769b",
     "avg_services": 1298.8
   },
   "Madison": {
-    "provider": "Conway County Community Services, Inc.",
+    "provider": "CSI",
     "color": "#d6769b",
     "avg_services": 1298.8
   },
   "Boone": {
-    "provider": "Conway County Community Services, Inc.",
+    "provider": "CSI",
     "color": "#d6769b",
     "avg_services": 1298.8
   },
   "Marion": {
-    "provider": "Conway County Community Services, Inc.",
+    "provider": "CSI",
     "color": "#d6769b",
     "avg_services": 1298.8
   },
   "Baxter": {
-    "provider": "Conway County Community Services, Inc.",
+    "provider": "CSI",
     "color": "#d6769b",
     "avg_services": 1298.8
   },
   "Newton": {
-    "provider": "Conway County Community Services, Inc.",
+    "provider": "CSI",
     "color": "#d6769b",
     "avg_services": 1298.8
   },
   "Carroll": {
-    "provider": "Conway County Community Services, Inc.",
+    "provider": "CSI",
     "color": "#d6769b",
     "avg_services": 1298.8
   },
   "Benton": {
-    "provider": "Conway County Community Services, Inc.",
+    "provider": "CSI",
     "color": "#d6769b",
     "avg_services": 1298.8
   },
   "Johnson": {
-    "provider": "Conway County Community Services, Inc.",
+    "provider": "CSI",
     "color": "#d6769b",
     "avg_services": 1298.8
   },
   "Franklin": {
-    "provider": "Conway County Community Services, Inc.",
+    "provider": "CSI",
     "color": "#d6769b",
     "avg_services": 1298.8
   },
   "Pope": {
-    "provider": "Conway County Community Services, Inc.",
+    "provider": "CSI",
     "color": "#d6769b",
     "avg_services": 1298.8
   },
   "Logan": {
-    "provider": "Conway County Community Services, Inc.",
+    "provider": "CSI",
     "color": "#d6769b",
     "avg_services": 1298.8
   },
   "Scott": {
-    "provider": "Conway County Community Services, Inc.",
+    "provider": "CSI",
     "color": "#d6769b",
     "avg_services": 1298.8
   },
   "Yell": {
-    "provider": "Conway County Community Services, Inc.",
+    "provider": "CSI",
     "color": "#d6769b",
     "avg_services": 1298.8
   },
   "Conway": {
-    "provider": "Conway County Community Services, Inc.",
+    "provider": "CSI",
     "color": "#d6769b",
     "avg_services": 1298.8
   },
   "Izard": {
-    "provider": "Conway County Community Services, Inc.",
+    "provider": "CSI",
     "color": "#d6769b",
     "avg_services": 1298.8
   },
   "Fulton": {
-    "provider": "Conway County Community Services, Inc.",
+    "provider": "CSI",
     "color": "#d6769b",
     "avg_services": 1298.8
   },
   "Stone": {
-    "provider": "Conway County Community Services, Inc.",
+    "provider": "CSI",
     "color": "#d6769b",
     "avg_services": 1298.8
   },
   "Independence": {
-    "provider": "Conway County Community Services, Inc.",
+    "provider": "CSI",
     "color": "#d6769b",
     "avg_services": 1298.8
   },
   "Cleburne": {
-    "provider": "Conway County Community Services, Inc.",
+    "provider": "CSI",
     "color": "#d6769b",
     "avg_services": 1298.8
   },
   "Faulkner": {
-    "provider": "Conway County Community Services, Inc.",
+    "provider": "CSI",
     "color": "#d6769b",
     "avg_services": 1298.8
   },
   "Van Buren": {
-    "provider": "Conway County Community Services, Inc.",
+    "provider": "CSI",
     "color": "#d6769b",
     "avg_services": 1298.8
   },
   "Searcy": {
-    "provider": "Conway County Community Services, Inc.",
+    "provider": "CSI",
     "color": "#d6769b",
     "avg_services": 1298.8
   },
   "Saline": {
-    "provider": "Counseling Clinic, Inc.",
+    "provider": "CCI",
     "color": "#c5110b",
     "avg_services": 222.6
   },
   "Hot Spring": {
-    "provider": "Counseling Clinic, Inc.",
+    "provider": "CCI",
     "color": "#c5110b",
     "avg_services": 222.6
   },
   "Grant": {
-    "provider": "Counseling Clinic, Inc.",
+    "provider": "CCI",
     "color": "#c5110b",
     "avg_services": 222.6
   },
   "Cross": {
-    "provider": "East Arkansas Youth Services, Inc.",
+    "provider": "EAYS",
     "color": "#d0f8b1",
     "avg_services": 143.4
   },
   "Woodruff": {
-    "provider": "East Arkansas Youth Services, Inc.",
+    "provider": "EAYS",
     "color": "#d0f8b1",
     "avg_services": 143.4
   },
   "St. Francis": {
-    "provider": "East Arkansas Youth Services, Inc.",
+    "provider": "EAYS",
     "color": "#d0f8b1",
     "avg_services": 143.4
   },
   "Monroe": {
-    "provider": "East Arkansas Youth Services, Inc.",
+    "provider": "EAYS",
     "color": "#d0f8b1",
     "avg_services": 143.4
   },
   "Lee": {
-    "provider": "East Arkansas Youth Services, Inc.",
+    "provider": "EAYS",
     "color": "#d0f8b1",
     "avg_services": 143.4
   },
   "Phillips": {
-    "provider": "East Arkansas Youth Services, Inc.",
+    "provider": "EAYS",
     "color": "#d0f8b1",
     "avg_services": 143.4
   },
   "White": {
-    "provider": "East Arkansas Youth Services, Inc.",
+    "provider": "EAYS",
     "color": "#d0f8b1",
     "avg_services": 143.4
   },
   "Prairie": {
-    "provider": "East Arkansas Youth Services, Inc.",
+    "provider": "EAYS",
     "color": "#d0f8b1",
     "avg_services": 143.4
   },
   "Clark": {
-    "provider": "Ouachita Children Youth and Family Services",
+    "provider": "OCC",
     "color": "#86d1af",
     "avg_services": 148.8
   },
   "Garland": {
-    "provider": "Ouachita Children Youth and Family Services",
+    "provider": "OCC",
     "color": "#86d1af",
     "avg_services": 148.8
   },
   "Desha": {
-    "provider": "Phoenix Youth and Family Services, Inc.",
+    "provider": "PYFS",
     "color": "#061bfc",
     "avg_services": 133.2
   },
   "Drew": {
-    "provider": "Phoenix Youth and Family Services, Inc.",
+    "provider": "PYFS",
     "color": "#061bfc",
     "avg_services": 133.2
   },
   "Bradley": {
-    "provider": "Phoenix Youth and Family Services, Inc.",
+    "provider": "PYFS",
     "color": "#061bfc",
     "avg_services": 133.2
   },
   "Ashley": {
-    "provider": "Phoenix Youth and Family Services, Inc.",
+    "provider": "PYFS",
     "color": "#061bfc",
     "avg_services": 133.2
   },
   "Chicot": {
-    "provider": "Phoenix Youth and Family Services, Inc.",
+    "provider": "PYFS",
     "color": "#061bfc",
     "avg_services": 133.2
   },
   "Lonoke": {
-    "provider": "Professional Counseling Associates, Inc.",
+    "provider": "PCA",
     "color": "#be5638",
     "avg_services": 54.6
   },
   "Hempstead": {
-    "provider": "Southwest Arkansas Counseling and Mental Health Center, Inc.",
+    "provider": "SWACMH",
     "color": "#f62962",
     "avg_services": 315.2
   },
   "Nevada": {
-    "provider": "Southwest Arkansas Counseling and Mental Health Center, Inc.",
+    "provider": "SWACMH",
     "color": "#f62962",
     "avg_services": 315.2
   },
   "Miller": {
-    "provider": "Southwest Arkansas Counseling and Mental Health Center, Inc.",
+    "provider": "SWACMH",
     "color": "#f62962",
     "avg_services": 315.2
   },
   "Lafayette": {
-    "provider": "Southwest Arkansas Counseling and Mental Health Center, Inc.",
+    "provider": "SWACMH",
     "color": "#f62962",
     "avg_services": 315.2
   },
   "Columbia": {
-    "provider": "Southwest Arkansas Counseling and Mental Health Center, Inc.",
+    "provider": "SWACMH",
     "color": "#f62962",
     "avg_services": 315.2
   },
   "Ouachita": {
-    "provider": "Southwest Arkansas Counseling and Mental Health Center, Inc.",
+    "provider": "SWACMH",
     "color": "#f62962",
     "avg_services": 315.2
   },
   "Calhoun": {
-    "provider": "Southwest Arkansas Counseling and Mental Health Center, Inc.",
+    "provider": "SWACMH",
     "color": "#f62962",
     "avg_services": 315.2
   },
   "Cleveland": {
-    "provider": "Southwest Arkansas Counseling and Mental Health Center, Inc.",
+    "provider": "SWACMH",
     "color": "#f62962",
     "avg_services": 315.2
   },
   "Dallas": {
-    "provider": "Southwest Arkansas Counseling and Mental Health Center, Inc.",
+    "provider": "SWACMH",
     "color": "#f62962",
     "avg_services": 315.2
   },
   "Sevier": {
-    "provider": "Southwest Arkansas Counseling and Mental Health Center, Inc.",
+    "provider": "SWACMH",
     "color": "#f62962",
     "avg_services": 315.2
   },
   "Howard": {
-    "provider": "Southwest Arkansas Counseling and Mental Health Center, Inc.",
+    "provider": "SWACMH",
     "color": "#f62962",
     "avg_services": 315.2
   },
   "Little River": {
-    "provider": "Southwest Arkansas Counseling and Mental Health Center, Inc.",
+    "provider": "SWACMH",
     "color": "#f62962",
     "avg_services": 315.2
   },
   "Union": {
-    "provider": "Southwest Arkansas Counseling and Mental Health Center, Inc.",
+    "provider": "SWACMH",
     "color": "#f62962",
     "avg_services": 315.2
   },
   "Pike": {
-    "provider": "Southwest Arkansas Counseling and Mental Health Center, Inc.",
+    "provider": "SWACMH",
     "color": "#f62962",
     "avg_services": 315.2
   },
   "Perry": {
-    "provider": "United Family Services, Inc.",
+    "provider": "UFS",
     "color": "#5d2bcc",
     "avg_services": 405.8
   },
   "Pulaski": {
-    "provider": "United Family Services, Inc.",
+    "provider": "UFS",
     "color": "#5d2bcc",
     "avg_services": 405.8
   },
   "Arkansas": {
-    "provider": "United Family Services, Inc.",
+    "provider": "UFS",
     "color": "#5d2bcc",
     "avg_services": 405.8
   },
   "Jefferson": {
-    "provider": "United Family Services, Inc.",
+    "provider": "UFS",
     "color": "#5d2bcc",
     "avg_services": 405.8
   },
   "Lincoln": {
-    "provider": "United Family Services, Inc.",
+    "provider": "UFS",
     "color": "#5d2bcc",
     "avg_services": 405.8
   }

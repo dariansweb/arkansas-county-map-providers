@@ -64,7 +64,7 @@
     "services_per_1000_youth": 8.44
   },
   {
-    "provider": "CCI",
+    "provider": "CCI", 
     "counties_served": [
       "Saline",
       "Hot Spring",
@@ -128,7 +128,7 @@
     "services_per_1000_youth": 5.15
   },
   {
-    "provider": "SWACMC",
+    "provider": "SWACMH",
     "counties_served": [
       "Hempstead",
       "Nevada",

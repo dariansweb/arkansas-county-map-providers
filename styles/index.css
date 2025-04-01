@@ -5,7 +5,6 @@ body {
   padding: 0;
   text-align: center;
 }
-
 header {
   background-color: #264653;
   color: #fff;
@@ -14,17 +13,21 @@ header {
   z-index: 1;
   position: sticky;
 }
-
 header h1 {
   margin: 0;
   font-size: 1.75rem;
 }
-
 header p {
   font-size: 1rem;
   margin: 0.5rem 0 0;
 }
-
+footer {
+  background-color: #eeeeee;
+  padding: 1rem;
+  font-size: 0.85rem;
+  margin-top: 2rem;
+  color: #555;
+}
 main {
   padding: 2rem;
 }
@@ -33,7 +36,6 @@ main {
   max-width: 95%;
   height: auto;
 }
-
 #map-controls {
   margin: 1rem auto;
   display: flex;
@@ -41,7 +43,6 @@ main {
   gap: 2rem;
   font-size: 1.1rem;
 }
-
 #data-description {
   max-width: 800px;
   margin: 2rem auto;
@@ -51,7 +52,6 @@ main {
   border: 1px solid #ccc;
   border-radius: 6px;
 }
-
 #provider-legend {
   max-width: 600px;
   margin: 2rem auto;
@@ -61,18 +61,15 @@ main {
   border: 1px solid #ccc;
   border-radius: 6px;
 }
-
 #legend-list {
   list-style: none;
   padding: 0;
 }
-
 #legend-list li {
   display: flex;
   align-items: center;
   margin: 5px 0;
 }
-
 #legend-list span.color-box {
   display: inline-block;
   width: 20px;
@@ -80,7 +77,6 @@ main {
   margin-right: 10px;
   border: 1px solid #999;
 }
-
 .tooltip {
   font-family: sans-serif;
   font-size: 13px;
@@ -93,7 +89,6 @@ main {
   opacity: 0;
   z-index: 1000;
 }
-
 #legend {
   display: flex;
   align-items: center;
@@ -101,7 +96,6 @@ main {
   gap: 10px;
   margin-top: 20px;
 }
-
 .legend-bar {
   width: 200px;
   height: 20px;
@@ -114,7 +108,6 @@ main {
   gap: 1.5rem;
   margin-top: 1.5rem;
 }
-
 .cbp-card {
   background: #ffffff;
   border-radius: 8px;
@@ -123,18 +116,15 @@ main {
   box-shadow: 0 2px 6px rgba(0,0,0,0.06);
   transition: transform 0.2s ease;
 }
-
 .cbp-card:hover {
   transform: scale(1.02);
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
-
 .cbp-card h3 {
   margin: 0;
   font-size: 1.2rem;
   color: #1a237e;
 }
-
 .cbp-card ul {
   list-style: none;
   margin: 0.75rem 0 0;
@@ -142,11 +132,9 @@ main {
   font-size: 0.95rem;
   color: #333;
 }
-
 .cbp-card ul li {
   margin: 0.3rem 0;
 }
-
 .cbp-card .badge {
   display: inline-block;
   background: #e0e0e0;
@@ -156,13 +144,11 @@ main {
   padding: 2px 6px;
   border-radius: 4px;
 }
-
 .cbp-card .badge-container {
   display: flex;
   flex-wrap: wrap;
   margin-top: 0.75rem;
 }
-
 #toggle-description {
   display: block;
   margin: 1rem auto;
@@ -175,17 +161,13 @@ main {
   cursor: pointer;
   transition: all 0.2s ease;
 }
-
 #toggle-description:hover {
   background-color: #00796b;
 }
-
 .sparkline {
   margin-top: 1rem;
   text-align: center;
 }
-
-
 .top5-description {
   max-width: 700px;
   margin: 0.5rem auto 1rem;
@@ -218,12 +200,73 @@ main {
   height: auto;
   display: block;
 }
-
-
-footer {
-  background-color: #eeeeee;
-  padding: 1rem;
-  font-size: 0.85rem;
-  margin-top: 2rem;
-  color: #555;
+// //////////////// //
+/* Modal container */
+// //////////////// //
+/* Modal backdrop wrapper */
+#county-modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
 }
+
+/* Modal inner content box */
+.county-modal-content {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 600px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+/* Hidden utility */
+.hidden {
+  display: none !important;
+}
+
+/* Modal close button */
+.county-modal-close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.cbp-toggle-btn {
+  margin-top: 8px;
+  padding: 4px 10px;
+  background-color: #eee;
+  border: 1px solid #bbb;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.cbp-details.hidden {
+  display: none;
+}
+
+.cbp-year-table {
+  width: 100%;
+  font-size: 0.75rem;
+  margin-top: 6px;
+  border-collapse: collapse;
+}
+
+.cbp-year-table th,
+.cbp-year-table td {
+  text-align: left;
+  padding: 2px 6px;
+  border-bottom: 1px solid #ddd;
+}
+

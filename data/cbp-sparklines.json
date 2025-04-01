@@ -1,5 +1,5 @@
 {
-  "Comprehensive Juvenile Services": [
+  "CJS": [
     {
       "year": 2020,
       "services": 247
@@ -21,7 +21,7 @@
       "services": 389
     }
   ],
-  "Consolidated Youth Services": [
+  "CYS": [
     {
       "year": 2020,
       "services": 251
@@ -43,7 +43,7 @@
       "services": 285
     }
   ],
-  "Conway County Community Services, Inc.": [
+  "CSI": [
     {
       "year": 2020,
       "services": 706
@@ -65,7 +65,7 @@
       "services": 1671
     }
   ],
-  "Counseling Clinic, Inc.": [
+  "CCI": [
     {
       "year": 2020,
       "services": 162
@@ -87,7 +87,7 @@
       "services": 324
     }
   ],
-  "East Arkansas Youth Services, Inc.": [
+  "EAYS": [
     {
       "year": 2020,
       "services": 112
@@ -109,7 +109,7 @@
       "services": 164
     }
   ],
-  "Ouachita Children Youth and Family Services": [
+  "OCC": [
     {
       "year": 2020,
       "services": 159
@@ -131,7 +131,7 @@
       "services": 159
     }
   ],
-  "Phoenix Youth and Family Services, Inc.": [
+  "PYFS": [
     {
       "year": 2020,
       "services": 101
@@ -153,7 +153,7 @@
       "services": 158
     }
   ],
-  "Professional Counseling Associates, Inc.": [
+  "PCA": [
     {
       "year": 2020,
       "services": 51
@@ -175,7 +175,7 @@
       "services": 72
     }
   ],
-  "Southwest Arkansas Counseling and Mental Health Center, Inc.": [
+  "SWACMH": [
     {
       "year": 2020,
       "services": 302
@@ -197,7 +197,7 @@
       "services": 288
     }
   ],
-  "United Family Services, Inc.": [
+  "UFS": [
     {
       "year": 2020,
       "services": 437

@@ -1,5 +1,5 @@
 {
-  "Comprehensive Juvenile Services": {
+  "CJS": {
     "color": "#0cedb5",
     "counties": [
       "Crawford",
@@ -9,7 +9,7 @@
     ],
     "avg_services": 325.4
   },
-  "Consolidated Youth Services": {
+  "CYS": {
     "color": "#970fd6",
     "counties": [
       "Clay",
@@ -25,7 +25,7 @@
     ],
     "avg_services": 267.8
   },
-  "Conway County Community Services, Inc.": {
+  "CSI": {
     "color": "#d6769b",
     "counties": [
       "Washington",
@@ -54,7 +54,7 @@
     ],
     "avg_services": 1298.8
   },
-  "Counseling Clinic, Inc.": {
+  "CCI": {
     "color": "#c5110b",
     "counties": [
       "Saline",
@@ -63,7 +63,7 @@
     ],
     "avg_services": 222.6
   },
-  "East Arkansas Youth Services, Inc.": {
+  "EAYS": {
     "color": "#d0f8b1",
     "counties": [
       "Cross",
@@ -77,7 +77,7 @@
     ],
     "avg_services": 143.4
   },
-  "Ouachita Children Youth and Family Services": {
+  "OCC": {
     "color": "#86d1af",
     "counties": [
       "Clark",
@@ -85,7 +85,7 @@
     ],
     "avg_services": 148.8
   },
-  "Phoenix Youth and Family Services, Inc.": {
+  "PYRS": {
     "color": "#061bfc",
     "counties": [
       "Desha",
@@ -96,14 +96,14 @@
     ],
     "avg_services": 133.2
   },
-  "Professional Counseling Associates, Inc.": {
+  "PCA": {
     "color": "#be5638",
     "counties": [
       "Lonoke"
     ],
     "avg_services": 54.6
   },
-  "Southwest Arkansas Counseling and Mental Health Center, Inc.": {
+  "SWACMH": {
     "color": "#f62962",
     "counties": [
       "Hempstead",
@@ -123,7 +123,7 @@
     ],
     "avg_services": 315.2
   },
-  "United Family Services, Inc.": {
+  "UFS": {
     "color": "#5d2bcc",
     "counties": [
       "Perry",
