@@ -1,3 +1,17 @@
+// Helper functions
+function getCountyDataByName(name) {
+  const normalized = name.trim().toLowerCase();
+  return window.countyData.find((c) => {
+    const n = c.name?.trim().toLowerCase();
+    return n === normalized || n === normalized + " county";
+  });
+}
+
+function getProviderNameFromCode(code) {
+  const match = providers.find((p) => p.code === code);
+  return match?.provider || code;
+}
+
 document.getElementById("close-modal").onclick = () => {
   document.getElementById("county-modal").classList.add("hidden");
 };
@@ -86,21 +100,114 @@ document.addEventListener("DOMContentLoaded", function () {
 
   Promise.all([
     fetch("data/COUNTY_BOUNDARY.svg").then((res) => res.text()),
+    fetch("data/cbp-region-summary.json").then((res) => res.json()),
     fetch("data/processed-counties.json").then((res) => res.json()),
     fetch("data/provider-coverage.json").then((res) => res.json()),
     fetch("data/provider-legend.json").then((res) => res.json()),
-  ]).then(([svgText, countyData, providerMap, legendMap]) => {
+  ]).then(([svgText, cbpSummary, countyData, providerMap, legendMap]) => {
+    // Map CBP summary data
 
-    
-    // ✅ Make this global so other parts of app can access it
-    window.countyData = countyData;
+    window.countyDataMap = {};
+    window.providerDataMap = {};
     window.providerCoverage = providerMap;
     window.providerLegend = legendMap;
+    window.countyDataMap = countyDataMap;
+    window.cbpSummary = cbpSummary;
 
     // Store references
     countyData.forEach((d) => (countyDataMap[d.county] = d));
     providerDataMap = providerMap;
     providerLegend = legendMap;
+
+    // First create provider summary mapping
+    const providerSummaryMap = {};
+    cbpSummary.forEach((d) => {
+      if (d.provider?.trim()) {
+        providerSummaryMap[d.provider.trim()] = {
+          counties_count: d.counties_count,
+          youth_population: d.youth_population,
+          avg_services: d.avg_services,
+          services_per_1000_youth: d.services_per_1000_youth,
+        };
+      }
+    });
+
+    // Map provider data with the summary data included
+    Object.entries(providerMap).forEach(([county, d]) => {
+      const countyId = county.trim().toUpperCase();
+      if (d.provider && providerSummaryMap[d.provider]) {
+        // Merge the summary data with the provider data
+        window.providerDataMap[countyId] = {
+          ...d,
+          ...providerSummaryMap[d.provider],
+        };
+      }
+      window.providerDataMap[countyId] = d;
+    });
+    console.log("Provider Summary Map:", providerSummaryMap);
+
+    Object.entries(providerMap).forEach(([county, d]) => {
+      const countyId = county.trim().toUpperCase();
+      if (d.provider && providerSummaryMap[d.provider]) {
+        // Merge the summary data with the provider data
+        window.providerDataMap[countyId] = {
+          ...d,
+          ...providerSummaryMap[d.provider],
+        };
+      } else {
+        window.providerDataMap[countyId] = d;
+      }
+    });
+
+    // Log the final provider data map
+    console.log("Final Provider Data Map:", window.providerDataMap);
+
+    // Pick a specific provider to verify its data
+    const sampleProvider = Object.values(window.providerDataMap)[0];
+    console.log("Sample Provider Data:", sampleProvider);
+    console.log(
+      "Sample Provider counties_count:",
+      sampleProvider?.counties_count
+    );
+
+    if (sampleProvider) {
+      console.log("Sample Provider Data:", {
+        provider: sampleProvider,
+        data: providerSummaryMap[sampleProvider?.provider],
+        counties_count_type:
+          typeof providerSummaryMap[sampleProvider?.provider]?.counties_count,
+      });
+    }
+
+    // Map county data using county ID as the key
+    countyData.forEach((d) => {
+      const countyId = d.county?.trim().toUpperCase();
+      if (countyId) {
+        window.countyDataMap[countyId] = d;
+      }
+    });
+
+    // Map provider data
+    Object.entries(providerMap).forEach(([county, d]) => {
+      const countyId = county.trim().toUpperCase();
+      window.providerDataMap[countyId] = d;
+    });
+    Object.values(providerMap).forEach((d) => {
+      const provider = d.provider?.trim();
+      if (provider) {
+        window.providerDataMap[provider] = d;
+      }
+    });
+
+    // console.log("Provider data map:", window.providerDataMap);
+    // console.log("Provider legend:", window.providerLegend);
+
+    // Debug logging to verify data loading
+    // console.log("Loaded counties:", Object.keys(window.countyDataMap).length);
+    // console.log(
+    //   "Loaded providers:",
+    //   Object.keys(window.providerDataMap).length
+    // );
 
     // Set up color scale for heatmap
     const maxVal = d3.max(countyData, (d) => d.services_per_1000_youth);
@@ -111,9 +218,10 @@ document.addEventListener("DOMContentLoaded", function () {
     const svg = d3.select("#map-container svg");
 
     svg.selectAll("path").on("click", function () {
-      const rawId = d3.select(this).attr("id"); // e.g., "FULTON"
-      const countyName = titleCase(rawId); // becomes "Fulton"
-      showCountyModal(countyName);
+      const id = d3.select(this).attr("id").trim().toUpperCase(); // Convert to uppercase
+      console.log("Clicked county:", id);
+      console.log("Current mode:", currentMode);
+      showCountyModalFromTooltip(id, currentMode);
     });
 
     // Initial render
@@ -129,6 +237,92 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     });
   });
+
+  function titleCase(str) {
+    return str
+      .toLowerCase()
+      .split(" ")
+      .map((word) => word[0].toUpperCase() + word.slice(1))
+      .join(" ");
+  }
+
+  function showCountyModalFromTooltip(id, mode) {
+    const modal = document.getElementById("county-modal");
+    const nameHeader = document.getElementById("modal-county-name");
+    const container = document.getElementById("modal-data-container");
+
+    const displayName = titleCase(id);
+    nameHeader.textContent = `${displayName} County`;
+
+    if (mode === "heatmap" && window.countyDataMap[id]) {
+      const d = window.countyDataMap[id];
+      container.innerHTML = `
+              <p><strong>Total Population:</strong> ${
+                d.population?.toLocaleString() || "N/A"
+              }</p>
+              <p><strong>Youth (10–19):</strong> ${
+                d.youth_population?.toLocaleString() || "N/A"
+              }</p>
+              <p><strong>Avg Services:</strong> ${d.avg_services || "N/A"}</p>
+              <p><strong>Per 1k Youth:</strong> ${
+                d.services_per_1000_youth || "N/A"
+              }</p>
+          `;
+    } else if (mode === "providers" && window.providerDataMap[id]) {
+      const d = window.providerDataMap[id];
+
+      console.log("Modal Data:", {
+        id: id,
+        fullData: d,
+        provider: d.provider,
+        counties_count: d.counties_count,
+        providerMapEntry: window.providerDataMap[d.provider],
+      });
+
+      console.log("Full Provider Data Map:", window.providerDataMap);
+
+      container.innerHTML = `
+      <p><strong>Provider:</strong> ${d.provider || "N/A"}</p>
+      <p><strong>Counties Served:</strong> ${
+        d?.counties_count ||
+        window.providerDataMap[d.provider]?.counties_count ||
+        "N/A"
+      }</p>
+      <p><strong>Avg Services (2020–2024):</strong> ${
+        d?.avg_services || "N/A"
+      }</p>
+  `;
+    } else {
+      container.innerHTML = `<p>No data available for ${displayName}</p>`;
+    }
+
+    modal.style.cssText = `
+    display: flex !important;
+    position: fixed !important;
+    z-index: 9999 !important;
+  `;
+    modal.classList.remove("hidden");
+
+    //document.body.style.overflow = "hidden";
+
+    modal.style.display = "flex";
+    modal.classList.remove("hidden");
+
+    // Add click event to close modal when clicking outside
+    modal.addEventListener("click", function (e) {
+      if (e.target === modal) {
+        hideModal();
+      }
+    });
+  }
+
+  function hideModal() {
+    const modal = document.getElementById("county-modal");
+    modal.style.display = "none";
+    modal.classList.add("hidden");
+    // Re-enable body scrolling
+    document.body.style.overflow = "visible";
+  }
 });
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -210,78 +404,3 @@ document.addEventListener("DOMContentLoaded", () => {
         .style("font-size", "0.8rem");
     });
 });
-
-function getCountyDataByName(name) {
-  const normalized = name.trim().toLowerCase();
-  return window.countyData.find((c) => {
-    const n = c.name?.trim().toLowerCase();
-    return n === normalized || n === normalized + " county";
-  });
-}
-
-// Helper function
-function getProviderNameFromCode(code) {
-  const match = providers.find((p) => p.code === code);
-  return match?.provider || code;
-}
-
-function titleCase(str) {
-  return str
-    .toLowerCase()
-    .split(" ")
-    .map((word) => word[0].toUpperCase() + word.slice(1))
-    .join(" ");
-}
-
-function showCountyModal(countyName) {
-  const modal = document.getElementById("county-modal");
-  const nameHeader = document.getElementById("modal-county-name");
-  const container = document.getElementById("modal-data-container");
-
-  nameHeader.textContent = countyName;
-
-  const county = getCountyDataByName(countyName);
-  const coverageEntry = window.providerCoverage[countyName];
-  const provider = coverageEntry?.provider;
-
-  // console.log("🔎 County keys in countyData:", Object.keys(window.countyData));
-  // console.log("👆 Is 'Fulton' in countyData?", !!getCountyDataByName("Fulton"));
-  console.log("🔥 County clicked:", countyName);
-  console.log("📦 countyData exists?", !!window.countyData);
-  console.log(
-    "🧠 First 3 entries in countyData:",
-    window.countyData?.slice(0, 3)
-  );
-  console.log(
-    "🔎 Does it include:",
-    countyName,
-    "=>",
-    window.countyData?.some(
-      (c) => c.name?.trim().toLowerCase() === countyName.trim().toLowerCase()
-    )
-  );
-  console.log("🔍 Actual names in countyData:");
-  window.countyData.forEach((c, i) => {
-    console.log(i, JSON.stringify(c.name));
-  });
-
-  if (!county) {
-    container.innerHTML = `<p>🚫 No population data found for ${countyName}</p>`;
-  } else {
-    const youth = county.age10_14.total + county.age15_19.total;
-
-    container.innerHTML = `
-      <p><strong>Total Population:</strong> ${county.pop.toLocaleString()}</p>
-      <p><strong>Youth (10–19):</strong> ${youth.toLocaleString()}</p>
-      <p><strong>CBP Provider:</strong> ${provider || "Unknown"}</p>
-      <p><strong>Age 10–14:</strong> ${county.age10_14.total} (M: ${
-      county.age10_14.male
-    }, F: ${county.age10_14.female})</p>
-      <p><strong>Age 15–19:</strong> ${county.age15_19.total} (M: ${
-      county.age15_19.male
-    }, F: ${county.age15_19.female})</p>
-    `;
-  }
-
-  modal.classList.remove("hidden");
-}
