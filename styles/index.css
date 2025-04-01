@@ -184,13 +184,41 @@ main {
   margin-top: 1rem;
   text-align: center;
 }
+
+
 .top5-description {
   max-width: 700px;
   margin: 0.5rem auto 1rem;
   font-size: 0.95rem;
   color: #444;
   text-align: left;
+  padding: 1em;
 }
+#top5-section {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+#top5-chart svg {
+  width: 100%;
+  height: auto;
+}
+#top5-chart {
+  margin-bottom: 2rem;
+}
+.responsive-chart {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+.responsive-chart svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
 
 footer {
   background-color: #eeeeee;

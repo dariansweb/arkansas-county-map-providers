@@ -66,9 +66,10 @@ document.addEventListener("DOMContentLoaded", function () {
       path
         .on("mouseover", function (event) {
           tooltip.transition().duration(200).style("opacity", 0.95);
-          tooltip.html(getTooltipContent(id, mode))
-            .style("left", (event.pageX + 10) + "px")
-            .style("top", (event.pageY - 28) + "px");
+          tooltip
+            .html(getTooltipContent(id, mode))
+            .style("left", event.pageX + 10 + "px")
+            .style("top", event.pageY - 28 + "px");
         })
         .on("mouseout", function () {
           tooltip.transition().duration(300).style("opacity", 0);
@@ -81,18 +82,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Load all required data
   Promise.all([
-    fetch("data/COUNTY_BOUNDARY.svg").then(res => res.text()),
-    fetch("data/processed-counties.json").then(res => res.json()),
-    fetch("data/provider-coverage.json").then(res => res.json()),
-    fetch("data/provider-legend.json").then(res => res.json())
+    fetch("data/COUNTY_BOUNDARY.svg").then((res) => res.text()),
+    fetch("data/processed-counties.json").then((res) => res.json()),
+    fetch("data/provider-coverage.json").then((res) => res.json()),
+    fetch("data/provider-legend.json").then((res) => res.json()),
   ]).then(([svgText, countyData, providerMap, legendMap]) => {
     // Store references
-    countyData.forEach(d => countyDataMap[d.county] = d);
+    countyData.forEach((d) => (countyDataMap[d.county] = d));
     providerDataMap = providerMap;
     providerLegend = legendMap;
 
     // Set up color scale for heatmap
-    const maxVal = d3.max(countyData, d => d.services_per_1000_youth);
+    const maxVal = d3.max(countyData, (d) => d.services_per_1000_youth);
     heatColor = d3.scaleSequential(d3.interpolateOranges).domain([0, maxVal]);
 
     // Load the SVG into the map container
@@ -104,7 +105,7 @@ document.addEventListener("DOMContentLoaded", function () {
     applyMapColors(svg, currentMode);
 
     // Handle toggle
-    document.querySelectorAll("input[name='mapMode']").forEach(input => {
+    document.querySelectorAll("input[name='mapMode']").forEach((input) => {
       input.addEventListener("change", () => {
         currentMode = input.value;
         renderLegend(currentMode);
@@ -121,14 +122,20 @@ document.addEventListener("DOMContentLoaded", () => {
   toggleBtn.addEventListener("click", () => {
     const isVisible = descriptionBox.style.display === "block";
     descriptionBox.style.display = isVisible ? "none" : "block";
-    toggleBtn.textContent = isVisible ? "Show Map Explanation" : "Hide Map Explanation";
+    toggleBtn.textContent = isVisible
+      ? "Show Map Explanation"
+      : "Hide Map Explanation";
   });
 });
 
 document.addEventListener("DOMContentLoaded", () => {
+  const container = document.getElementById("top5-chart");
+  const width = container.offsetWidth || 800; // fallback if container is collapsed
+  const height = 300;
+
   fetch("data/cbp-region-summary.json")
-    .then(res => res.json())
-    .then(data => {
+    .then((res) => res.json())
+    .then((data) => {
       const top5 = data
         .sort((a, b) => a.services_per_1000_youth - b.services_per_1000_youth)
         .slice(0, 5);
@@ -137,45 +144,53 @@ document.addEventListener("DOMContentLoaded", () => {
       const width = 800;
       const height = 300;
 
-      const svg = d3.select("#top5-chart")
+      const svg = d3
+        .select("#top5-chart")
         .append("svg")
-        .attr("width", width)
-        .attr("height", height);
+        .attr("viewBox", `0 0 ${width} ${height}`)
+        .attr("preserveAspectRatio", "xMidYMid meet")
+        .classed("responsive-svg", true);
 
-      const x = d3.scaleLinear()
-        .domain([0, d3.max(top5, d => d.services_per_1000_youth)])
+      const x = d3
+        .scaleLinear()
+        .domain([0, d3.max(top5, (d) => d.services_per_1000_youth)])
         .range([margin.left, width - margin.right]);
 
-      const y = d3.scaleBand()
-        .domain(top5.map(d => d.provider))
+      const y = d3
+        .scaleBand()
+        .domain(top5.map((d) => d.provider))
         .range([margin.top, height - margin.bottom])
         .padding(0.2);
 
-      svg.append("g")
+      svg
+        .append("g")
         .call(d3.axisLeft(y))
         .attr("transform", `translate(${margin.left},0)`);
 
-      svg.append("g")
+      svg
+        .append("g")
         .attr("transform", `translate(0,${height - margin.bottom})`)
         .call(d3.axisBottom(x));
 
-      svg.selectAll("rect")
+      svg
+        .selectAll("rect")
         .data(top5)
         .enter()
         .append("rect")
         .attr("x", margin.left)
-        .attr("y", d => y(d.provider))
-        .attr("width", d => x(d.services_per_1000_youth) - margin.left)
+        .attr("y", (d) => y(d.provider))
+        .attr("width", (d) => x(d.services_per_1000_youth) - margin.left)
         .attr("height", y.bandwidth())
         .attr("fill", "#f44336");
 
-      svg.selectAll("text.value")
+      svg
+        .selectAll("text.value")
         .data(top5)
         .enter()
         .append("text")
-        .attr("x", d => x(d.services_per_1000_youth) + 5)
-        .attr("y", d => y(d.provider) + y.bandwidth() / 2 + 4)
-        .text(d => d.services_per_1000_youth)
+        .attr("x", (d) => x(d.services_per_1000_youth) + 5)
+        .attr("y", (d) => y(d.provider) + y.bandwidth() / 2 + 4)
+        .text((d) => d.services_per_1000_youth)
         .attr("fill", "#333")
         .style("font-size", "0.8rem");
     });

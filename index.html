@@ -1,99 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Arkansas County DHS-DYS Heatmap</title>
+    <link rel="stylesheet" href="./styles/index.css" />
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="scripts/mapRenderer.js" defer></script>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <title>Arkansas County DHS-DYS Heatmap</title>
-  <link rel="stylesheet" href="./styles/index.css" />
-  <script src="https://d3js.org/d3.v7.min.js"></script>
-  <script src="scripts/mapRenderer.js" defer></script>
-</head>
+  <body>
+    <header>
+      <h1>Juvenile Justice Information Dashboard</h1>
+      <p>
+        Showing average services delivered per 1,000 youth (ages 10–19) from
+        2020–2024
+      </p>
+    </header>
+    <section id="data-description-wrapper">
+      <button id="toggle-description">Show Map Explanation</button>
 
-<body>
-  <header>
-    <h1>Juvenile Justice Information Dashboard</h1>
-    <p>Showing average services delivered per 1,000 youth (ages 10–19) from 2020–2024</p>
-  </header>
-  <section id="data-description-wrapper">
-    <button id="toggle-description">Show Map Explanation</button>
-  
-    <div id="data-description" style="display: none;">
-      <h2>What are you seeing?</h2>
-      <p>
-        This interactive map and dashboard visualize the youth services delivered across Arkansas by
-        <strong>Community-Based Providers (CBPs)</strong> from 2020 to 2024. These services support youth aged
-        <strong>10 to 19</strong> and vary by region based on need, access, and provider resources.
-      </p>
-  
-      <p>The data is displayed in two visual modes:</p>
-      <ul>
-        <li>
-          <strong>Heatmap</strong> – Each county is shaded based on the <em>average number of services delivered per 1,000 youth (ages 10–19)</em>.
-          However, please note: the total number of youth served by a CBP is reported as a single figure across all counties they serve.
-          The shading for each county reflects that average proportionally — it does <em>not</em> represent the exact number of services
-          delivered within that individual county.
-        </li>
-        <li>
-          <strong>Provider Coverage</strong> – Each county is color-coded based on the CBP assigned to serve that area.
-          This view illustrates service regions and the overall reach of each provider, regardless of where their actual services were delivered.
-        </li>
-      </ul>
-  
-      <p>
-        Below the map, the <strong>CBP Regional Summary</strong> provides a breakdown of each provider’s reach,
-        the total youth population they serve, average number of services provided, and their overall
-        service rate per 1,000 youth across their designated counties.
-      </p>
-  
-      <p>
-        This visualization aims to inform decision-making, promote equity, and spotlight areas
-        where youth may be underserved or where provider capacity may need to grow.
-      </p>
-    </div>
-  </section>
-  
-  <main>
-    <section id="map-controls">
-      <label><input type="radio" name="mapMode" value="heatmap" checked /> Heatmap</label>
-      <label><input type="radio" name="mapMode" value="providers" /> Provider Coverage</label>
+      <div id="data-description" style="display: none">
+        <h2>What are you seeing?</h2>
+        <p>
+          This interactive map and dashboard visualize the youth services
+          delivered across Arkansas by
+          <strong>Community-Based Providers (CBPs)</strong> from 2020 to 2024.
+          These services support youth aged <strong>10 to 19</strong> and vary
+          by region based on need, access, and provider resources.
+        </p>
+
+        <p>The data is displayed in two visual modes:</p>
+        <ul>
+          <li>
+            <strong>Heatmap</strong> – Each county is shaded based on the
+            <em
+              >average number of services delivered per 1,000 youth (ages
+              10–19)</em
+            >. However, please note: the total number of youth served by a CBP
+            is reported as a single figure across all counties they serve. The
+            shading for each county reflects that average proportionally — it
+            does <em>not</em> represent the exact number of services delivered
+            within that individual county.
+          </li>
+          <li>
+            <strong>Provider Coverage</strong> – Each county is color-coded
+            based on the CBP assigned to serve that area. This view illustrates
+            service regions and the overall reach of each provider, regardless
+            of where their actual services were delivered.
+          </li>
+        </ul>
+
+        <p>
+          Below the map, the <strong>CBP Regional Summary</strong> provides a
+          breakdown of each provider’s reach, the total youth population they
+          serve, average number of services provided, and their overall service
+          rate per 1,000 youth across their designated counties.
+        </p>
+
+        <p>
+          This visualization aims to inform decision-making, promote equity, and
+          spotlight areas where youth may be underserved or where provider
+          capacity may need to grow.
+        </p>
+      </div>
     </section>
-   
- 
-    <div id="map-container"></div>
-    <section id="provider-legend">
-      <h3>Provider Legend</h3>
-      <ul id="legend-list"></ul>
+
+    <main>
+      <section id="map-controls">
+        <label
+          ><input type="radio" name="mapMode" value="heatmap" checked />
+          Heatmap</label
+        >
+        <label
+          ><input type="radio" name="mapMode" value="providers" /> Provider
+          Coverage</label
+        >
+      </section>
+
+      <div id="map-container"></div>
+      <section id="provider-legend">
+        <h3>Provider Legend</h3>
+        <ul id="legend-list"></ul>
+      </section>
+
+      <div id="legend">
+        <span>Low</span>
+        <div class="legend-bar"></div>
+        <span>High</span>
+      </div>
+    </main>
+    <section id="top5-section">
+      <h2>Top 5 Most Underserved CBPs</h2>
+      <p class="top5-description">
+        This chart highlights the five Community-Based Providers (CBPs) with the
+        lowest average number of services delivered per 1,000 youth (ages 10–19)
+        across their assigned counties from 2020 to 2024. These values are
+        calculated by comparing the total youth population served in a
+        provider's region against their average annual service totals.
+      </p>
+      <div id="top5-chart" class="responsive-chart"></div>
+      <div id="top5-chart"></div>
     </section>
- 
-    <div id="legend">
-      <span>Low</span>
-      <div class="legend-bar"></div>
-      <span>High</span>
-    </div>
-  </main>
-  <section id="top-underserved">
-    <h2>Top 5 Most Underserved CBPs</h2>
-    <p class="top5-description">
-      This chart highlights the five Community-Based Providers (CBPs) with the lowest average number of services delivered 
-      per 1,000 youth (ages 10–19) across their assigned counties from 2020 to 2024. 
-      These values are calculated by comparing the total youth population served in a provider's region 
-      against their average annual service totals.
-    </p>    
-    <div id="top5-chart"></div>
-  </section>
 
-  <section id="cbp-summary-panel">
-    <h2>CBP Regional Summary</h2>
-    <div id="cbp-panel-container">
-    </div>
-  </section>
-    
+    <section id="cbp-summary-panel">
+      <h2>CBP Regional Summary</h2>
+      <div id="cbp-panel-container"></div>
+    </section>
 
-  <footer>
-    <p>Created by Darian Ross, visualized with D3.js & 🤘 for the Division of Youth Services</p>
-  </footer>
-  <script src="scripts/cbpPanel.js"></script>
-
-</body>
-
+    <footer>
+      <p>
+        Created by Darian Ross, visualized with D3.js & 🤘 for the Division of
+        Youth Services
+      </p>
+    </footer>
+    <script src="scripts/cbpPanel.js"></script>
+  </body>
 </html>
