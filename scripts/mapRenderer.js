@@ -255,6 +255,11 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function showCountyModalFromTooltip(id, mode) {
+    // console.log("County ID:", id);
+    // console.log("Provider Code:", window.providerDataMap[id]?.provider);
+    // console.log("Provider Data:", window.providerDataMap[window.providerDataMap[id]?.provider]);
+    // console.log("County Provider Data:", window.providerDataMap[id]);
+
     const modal = document.getElementById("county-modal");
     const nameHeader = document.getElementById("modal-county-name");
     const container = document.getElementById("modal-data-container");
@@ -277,6 +282,9 @@ document.addEventListener("DOMContentLoaded", function () {
               }</p>
           `;
     } else if (mode === "providers" && window.providerDataMap[id]) {
+      const providerData =
+        window.providerDataMap[window.providerDataMap[id].provider];
+
       const d = window.providerDataMap[id];
 
       // console.log("Modal Data:", {
@@ -287,22 +295,19 @@ document.addEventListener("DOMContentLoaded", function () {
       //   providerMapEntry: window.providerDataMap[d.provider],
       // });
 
-      console.log("Full Provider Data Map:", window.providerDataMap);
-
       container.innerHTML = `
       <p><strong>Provider:</strong> ${d.provider || "N/A"}</p>
-      <p><strong>Counties Served:</strong> ${
-        d.counties_served?.join(", ") || "N/A"
+      <p><strong>Total Counties:</strong> ${
+        providerData.counties_count || "N/A"
       }</p>
-      <p><strong>Total Counties:</strong> ${d.counties_count || "N/A"}</p>
       <p><strong>Youth Population (10–19):</strong> ${
-        d.youth_population?.toLocaleString() || "N/A"
+        providerData.youth_population?.toLocaleString() || "N/A"
       }</p>
       <p><strong>Avg Services (2020–2024):</strong> ${
-        d.avg_services || "N/A"
+        providerData.avg_services || "N/A"
       }</p>
       <p><strong>Services per 1,000 Youth:</strong> ${
-        d.services_per_1000_youth || "N/A"
+        providerData.services_per_1000_youth || "N/A"
       }</p>
     `;
     } else {
