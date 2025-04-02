@@ -7,10 +7,10 @@ function getCountyDataByName(name) {
   });
 }
 
-function getProviderNameFromCode(code) {
-  const match = providers.find((p) => p.code === code);
-  return match?.provider || code;
-}
+// function getProviderNameFromCode(code) {
+//   const match = providers.find((p) => p.code === code);
+//   return match?.provider || code;
+// }
 
 document.getElementById("close-modal").onclick = () => {
   document.getElementById("county-modal").classList.add("hidden");
@@ -105,22 +105,20 @@ document.addEventListener("DOMContentLoaded", function () {
     fetch("data/provider-coverage.json").then((res) => res.json()),
     fetch("data/provider-legend.json").then((res) => res.json()),
   ]).then(([svgText, cbpSummary, countyData, providerMap, legendMap]) => {
-    // Map CBP summary data
-
-    window.countyDataMap = {};
+    //const countyDataMap = {};
+    const providerSummaryMap = {};
     window.providerDataMap = {};
     window.providerCoverage = providerMap;
     window.providerLegend = legendMap;
-    window.countyDataMap = countyDataMap;
     window.cbpSummary = cbpSummary;
+    window.countyDataMap = countyDataMap;
 
-    // Store references
+    // Store references`
     countyData.forEach((d) => (countyDataMap[d.county] = d));
     providerDataMap = providerMap;
     providerLegend = legendMap;
 
     // First create provider summary mapping
-    const providerSummaryMap = {};
     cbpSummary.forEach((d) => {
       if (d.provider?.trim()) {
         providerSummaryMap[d.provider.trim()] = {
@@ -132,19 +130,28 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
 
-    // Map provider data with the summary data included
     Object.entries(providerMap).forEach(([county, d]) => {
       const countyId = county.trim().toUpperCase();
-      if (d.provider && providerSummaryMap[d.provider]) {
-        // Merge the summary data with the provider data
+      const providerCode = d.provider?.trim();
+
+      if (providerCode && providerSummaryMap[providerCode]) {
         window.providerDataMap[countyId] = {
           ...d,
-          ...providerSummaryMap[d.provider],
+          ...providerSummaryMap[providerCode],
+        };
+      } else {
+        window.providerDataMap[countyId] = d;
+      }
+
+      // Also map by provider code to easily retrieve full data later
+      if (providerCode) {
+        window.providerDataMap[providerCode] = {
+          ...d,
+          ...providerSummaryMap[providerCode],
         };
       }
-      window.providerDataMap[countyId] = d;
+      // console.log("🔥 Example provider data (CJS):", window.providerDataMap["CJS"]);
     });
-    console.log("Provider Summary Map:", providerSummaryMap);
 
     Object.entries(providerMap).forEach(([county, d]) => {
       const countyId = county.trim().toUpperCase();
@@ -159,25 +166,25 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
 
-    // Log the final provider data map
-    console.log("Final Provider Data Map:", window.providerDataMap);
+    // // Log the final provider data map
+    // console.log("Final Provider Data Map:", window.providerDataMap);
 
-    // Pick a specific provider to verify its data
-    const sampleProvider = Object.values(window.providerDataMap)[0];
-    console.log("Sample Provider Data:", sampleProvider);
-    console.log(
-      "Sample Provider counties_count:",
-      sampleProvider?.counties_count
-    );
+    // // Pick a specific provider to verify its data
+    // const sampleProvider = Object.values(window.providerDataMap)[0];
+    // console.log("Sample Provider Data:", sampleProvider);
+    // console.log(
+    //   "Sample Provider counties_count:",
+    //   sampleProvider?.counties_count
+    // );
 
-    if (sampleProvider) {
-      console.log("Sample Provider Data:", {
-        provider: sampleProvider,
-        data: providerSummaryMap[sampleProvider?.provider],
-        counties_count_type:
-          typeof providerSummaryMap[sampleProvider?.provider]?.counties_count,
-      });
-    }
+    // if (sampleProvider) {
+    //   console.log("Sample Provider Data:", {
+    //     provider: sampleProvider,
+    //     data: providerSummaryMap[sampleProvider?.provider],
+    //     counties_count_type:
+    //       typeof providerSummaryMap[sampleProvider?.provider]?.counties_count,
+    //   });
+    // }
 
     // Map county data using county ID as the key
     countyData.forEach((d) => {
@@ -192,12 +199,12 @@ document.addEventListener("DOMContentLoaded", function () {
       const countyId = county.trim().toUpperCase();
       window.providerDataMap[countyId] = d;
     });
-    Object.values(providerMap).forEach((d) => {
-      const provider = d.provider?.trim();
-      if (provider) {
-        window.providerDataMap[provider] = d;
-      }
-    });
+    // Object.values(providerMap).forEach((d) => {
+    //   const provider = d.provider?.trim();
+    //   if (provider) {
+    //     window.providerDataMap[provider] = d;
+    //   }
+    // });
 
     // console.log("Provider data map:", window.providerDataMap);
     // console.log("Provider legend:", window.providerLegend);
@@ -210,6 +217,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // );
 
     // Set up color scale for heatmap
+
     const maxVal = d3.max(countyData, (d) => d.services_per_1000_youth);
     heatColor = d3.scaleSequential(d3.interpolateOranges).domain([0, maxVal]);
 
@@ -219,8 +227,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     svg.selectAll("path").on("click", function () {
       const id = d3.select(this).attr("id").trim().toUpperCase(); // Convert to uppercase
-      console.log("Clicked county:", id);
-      console.log("Current mode:", currentMode);
+      // console.log("Clicked county:", id);
+      // console.log("Current mode:", currentMode);
       showCountyModalFromTooltip(id, currentMode);
     });
 
@@ -271,27 +279,32 @@ document.addEventListener("DOMContentLoaded", function () {
     } else if (mode === "providers" && window.providerDataMap[id]) {
       const d = window.providerDataMap[id];
 
-      console.log("Modal Data:", {
-        id: id,
-        fullData: d,
-        provider: d.provider,
-        counties_count: d.counties_count,
-        providerMapEntry: window.providerDataMap[d.provider],
-      });
+      // console.log("Modal Data:", {
+      //   id: id,
+      //   fullData: d,
+      //   provider: d.provider,
+      //   counties_count: d.counties_count,
+      //   providerMapEntry: window.providerDataMap[d.provider],
+      // });
 
       console.log("Full Provider Data Map:", window.providerDataMap);
 
       container.innerHTML = `
       <p><strong>Provider:</strong> ${d.provider || "N/A"}</p>
       <p><strong>Counties Served:</strong> ${
-        d?.counties_count ||
-        window.providerDataMap[d.provider]?.counties_count ||
-        "N/A"
+        d.counties_served?.join(", ") || "N/A"
+      }</p>
+      <p><strong>Total Counties:</strong> ${d.counties_count || "N/A"}</p>
+      <p><strong>Youth Population (10–19):</strong> ${
+        d.youth_population?.toLocaleString() || "N/A"
       }</p>
       <p><strong>Avg Services (2020–2024):</strong> ${
-        d?.avg_services || "N/A"
+        d.avg_services || "N/A"
       }</p>
-  `;
+      <p><strong>Services per 1,000 Youth:</strong> ${
+        d.services_per_1000_youth || "N/A"
+      }</p>
+    `;
     } else {
       container.innerHTML = `<p>No data available for ${displayName}</p>`;
     }
