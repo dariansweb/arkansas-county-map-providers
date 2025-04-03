@@ -44,22 +44,22 @@ By displaying service rates **relative to the population of youth aged 10–19**
 - `data/Arkansas_CBP_Analysis_2020-2024.pdf`  
   Comprehensive analysis report of Community-Based Provider services from 2020 to 2024.&#8203;:contentReference[oaicite:2]{index=2}
 
-- `COUNTY_BOUNDARY.svg`  
+- `data/COUNTY_BOUNDARY.svg`  
   Simplified vector county map used for rendering D3 polygons
 
-- `countyData.js`  
+- `data/countyData.js`  
   Average population, male/female counts, and youth age groups per county
 
-- `providers-intake-data.js`  
+- `data/providers-intake-data.js`  
   Service totals by CBP from 2020 to 2024
 
-- `provider-coverage.json`  
+- `data/provider-coverage.json`  
   County-to-provider mapping used in map overlays
 
-- `cbp-region-summary.json`  
+- `data/cbp-region-summary.json`  
   Region-wide service and youth stats by CBP
 
-- `cbp-sparklines.json`  
+- `data/cbp-sparklines.json`  
   5-year service totals for generating mini trendlines in each CBP card
 
 ---
