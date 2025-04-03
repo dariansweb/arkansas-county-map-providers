@@ -36,6 +36,7 @@ CBPs are assigned large multi-county regions. However, service data is often rep
 
 By displaying service rates **relative to the population of youth aged 10–19**, this dashboard paints a clearer picture of where support is strong—and where it's still needed.
 
+
 ---
 
 ## 📦 File Contents
@@ -44,24 +45,24 @@ By displaying service rates **relative to the population of youth aged 10–19**
   Comprehensive analysis report of Community-Based Provider services from 2020 to 2024.&#8203;:contentReference[oaicite:2]{index=2}
 
 - `COUNTY_BOUNDARY.svg`  
-  :contentReference[oaicite:3]{index=3}&#8203;:contentReference[oaicite:4]{index=4}
+  Simplified vector county map used for rendering D3 polygons
 
 - `countyData.js`  
-  :contentReference[oaicite:5]{index=5}&#8203;:contentReference[oaicite:6]{index=6}
+  Average population, male/female counts, and youth age groups per county
 
 - `providers-intake-data.js`  
-  :contentReference[oaicite:7]{index=7}&#8203;:contentReference[oaicite:8]{index=8}
+  Service totals by CBP from 2020 to 2024
 
 - `provider-coverage.json`  
-  :contentReference[oaicite:9]{index=9}&#8203;:contentReference[oaicite:10]{index=10}
+  County-to-provider mapping used in map overlays
 
 - `cbp-region-summary.json`  
-  :contentReference[oaicite:11]{index=11}&#8203;:contentReference[oaicite:12]{index=12}
+  Region-wide service and youth stats by CBP
 
 - `cbp-sparklines.json`  
-  :contentReference[oaicite:13]{index=13}&#8203;:contentReference[oaicite:14]{index=14}
+  5-year service totals for generating mini trendlines in each CBP card
 
---- 
+---
 
 ## 🧭 Data Sources
 
