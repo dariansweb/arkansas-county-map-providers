@@ -10,12 +10,14 @@ This project maps **juvenile justice and youth service data** across all 75 Arka
 ## 💡 What This Project Does
 
 This dashboard visualizes:
+
 - **Youth service delivery rates** across the state (2020–2024)
 - **Community-Based Provider coverage regions**
 - **Youth population by county**
 - Historical **service trends** per CBP
 
 It helps identify:
+
 - Underserved youth populations
 - Provider regions with low service rates per 1,000 youth
 - Regional disparities in service distribution
@@ -60,20 +62,23 @@ By displaying service rates **relative to the population of youth aged 10–19**
 
 ## 🧭 Data Sources
 
-### 🗺️ County Boundaries  
+### 🗺️ County Boundaries
+
 [Arkansas GIS Office – County Boundary Polygons](https://gis.arkansas.gov/product/county-boundary-polygons/)
 
-### 👥 Population Data  
+### 👥 Population Data
+
 [U.S. Census Bureau – County Population Totals (2020–2024)](https://www.census.gov/data/tables/time-series/demo/popest/2020s-counties-total.html)
 
-### 📊 Juvenile Commitment Data  
+### 📊 Juvenile Commitment Data
+
 [Arkansas DHS Division of Youth Services – Reports & Publications](https://humanservices.arkansas.gov/divisions-shared-services/youth-services/reports-publications/)
 
 ---
 
 ## 🌐 Example: Load the Map in D3
 
-```js
+```javascript
 d3.xml("COUNTY_BOUNDARY.svg").then((svg) => {
   document.getElementById("map-container").appendChild(svg.documentElement);
 });
